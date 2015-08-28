@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Hind:400,500,600);
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+
+$navbar-height: 70px;
+$navbar-font: 'Oxygen', sans-serif;
+
+$sizebar-width: 280px;
+$sizebar-collapse-width: 70px;
+
+html, body {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+}
+
+.app-container {
+  height: 100%;
+  min-height: 100%;
+
+  .app-header {
+    position: fixed;
+    width: 100%;
+    .navbar.navbar-default {
+      min-height: $navbar-height;
+      margin-bottom: 0;
+      border: 0;
+      border-radius: 0;
+      -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.1);
+      -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.1);
+      box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.1);
+
+      & > .container-fluid {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+      .navbar-header {
+        width: $sizebar-width;
+        overflow: hidden;
+
+        .navbar-brand {
+          margin-left: 0;
+          font-family: $navbar-font;
+          padding: 0 15px;
+          width: 100%;
+          height: $navbar-height;
+          line-height: $navbar-height;
+          vertical-align: middle;
+          text-align: center;
+          font-size: 1.2em;
+          text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+          font-weight: 400;
+
+          .brand-logo {
+            font-size: 1.5em;
+            display: none;
+          }
+
+          .brand-title {
+            display: block;
+          }
+        }
+      }
+
+      .navbar-collapse {
+        ul.nav:not(.navbar-right) {
+          & > li {
+            line-height: $navbar-height;
+            vertical-align: middle;
+
+            .btn-search {
+              border: 0px;
+              padding: 0 20px;
+
+              font-size: 15px;
+            }
+
+            .btn-toggle-sidebar {
+              border: 0px;
+              padding: 0 20px;
+              font-size: 15px;
+            }
+
+            ol.breadcrumb {
+              border-radius: 0;
+              padding: 0 20px;
+              margin-bottom: 0;
+
+              & > li {
+                font-size: 0.90em;
+                font-weight: 600;
+                font-family: $navbar-font;
+                & > a {
+                  text-decoration: none;
+                  font-family: $navbar-font;
+                  font-weight: 600;
+                }
+              }
+              & > li+li:before {
+                font-family: 'FontAwesome';
+                content: "\f105";
+                padding: 0 13px 0 8px;
+                font-size: 15px;
+                height: $navbar-height;
+                line-height: $navbar-height;
+                position: relative;
+                float: left;
+              }
+            }
+          }
+        }
+        ul.nav.navbar-right {
+          & > li {
+            a {
+              font-family: $navbar-font;
+              height: $navbar-height;
+              line-height: $navbar-height;
+              padding: 0 20px;
+            }
+          }
+
+          & > li.profile {
+            font-size: 0.90em;
+            font-weight: 600;
+            font-family: $navbar-font;
+
+            a {
+              display: inline-block;
+            }
+
+            a:after {
+              font-family: 'FontAwesome';
+              content: "\f107";
+              display: inline-block;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .app-sidebar {
+    width: $sizebar-width;
+    height: 100%;
+    float: left;
+  }
+}
+
+.app-container.app-sidebar-collapse {
+  .app-header {
+    .navbar.navbar-default {
+      .navbar-header {
+        width: $sizebar-collapse-width;
+
+        .navbar-brand {
+          .brand-logo {
+            display: block;
+          }
+
+          .brand-title {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .app-sidebar {
+    width: $sizebar-collapse-width;
+  }
+}

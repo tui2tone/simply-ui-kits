@@ -1,0 +1,64 @@
+$color-white: #FFF;
+$color-white-smoke: #F9F9F9;
+$color-white-grey: #EEE;
+
+$color-green: #36B846;
+$color-green-dark: #18a328;
+
+$color-black: #212121;
+
+body {
+    background-color: $color-white-grey;
+}
+.app-container.flatio-green {
+  background-color: $color-white-grey;
+  .app-header {
+    .navbar.navbar-default {
+      background-color: $color-white;
+        .navbar-header {
+          background-color: $color-green;
+          .navbar-brand {
+            color: $color-white;
+          }
+        }
+
+        .navbar-collapse {
+          ul.nav {
+            & > li {
+              .btn-search , .btn-toggle-sidebar, ol.breadcrumb {
+                background-color: $color-white;
+              }
+              ol.breadcrumb {
+                & > li {
+                  color: $color-black;
+                  font-weight: bold;
+                  & > a {
+                    color: $color-black;
+                  }
+                }
+                & > li+li:before {
+                  color: $color-black;
+                }
+                & > li.active {
+                  color: $color-green-dark;
+                }
+              }
+            }
+            & > li.br {
+              border-right: 1px solid $color-white-grey;
+            }
+            & > li.bl {
+              border-left: 1px solid $color-white-grey;
+            }
+          }
+        }
+    }
+  }
+
+  .app-sidebar {
+    background-color: $color-black;
+    -webkit-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.1);
+    box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.1);
+  }
+}
