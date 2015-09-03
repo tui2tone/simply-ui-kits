@@ -5,5 +5,5 @@ var gulp = require("gulp")
     runSequence = require('run-sequence');
 
 gulp.task('dev', function() {
-  return runSequence('coffee','sass','html','dev-server', 'watch');
+  return runSequence('coffee',['style','theme'],'html','dev-server', 'watch');
 });

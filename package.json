@@ -21,7 +21,8 @@
     "browser-sync": "*",
     "gulp-notify": "*",
     "gulp-file-include": "*",
-    "gulp-plumber": "*"
+    "gulp-plumber": "*",
+    "gulp-concat": "*"
   },
   "private": true
 }

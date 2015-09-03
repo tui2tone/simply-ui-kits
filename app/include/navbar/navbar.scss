@@ -1,27 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Hind:400,500,600);
-@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);
-@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
-
+/*
+Navbar Stylesheet
+*/
 $navbar-height: 70px;
 $navbar-font: 'Oxygen', sans-serif;
 
 $sizebar-width: 280px;
 $sizebar-collapse-width: 70px;
 
-html, body {
-  position: relative;
-  height: 100%;
-  min-height: 100%;
-}
-
 .app-container {
-  height: 100%;
-  min-height: 100%;
-
   .app-header {
     position: fixed;
     width: 100%;
+    z-index: 1006;
     .navbar.navbar-default {
       min-height: $navbar-height;
       margin-bottom: 0;
@@ -38,6 +28,8 @@ html, body {
       .navbar-header {
         width: $sizebar-width;
         overflow: hidden;
+        -webkit-transition: width 0.2s;
+        transition: width 0.2s;
 
         .navbar-brand {
           margin-left: 0;
@@ -91,6 +83,7 @@ html, body {
                 font-size: 0.90em;
                 font-weight: 600;
                 font-family: $navbar-font;
+                float: left;
                 & > a {
                   text-decoration: none;
                   font-family: $navbar-font;
@@ -107,6 +100,11 @@ html, body {
                 position: relative;
                 float: left;
               }
+            }
+            ol.breadcrumb::after {
+              content: '';
+              clear: both;
+              display: block;
             }
           }
         }
@@ -139,34 +137,5 @@ html, body {
         }
       }
     }
-  }
-
-  .app-sidebar {
-    width: $sizebar-width;
-    height: 100%;
-    float: left;
-  }
-}
-
-.app-container.app-sidebar-collapse {
-  .app-header {
-    .navbar.navbar-default {
-      .navbar-header {
-        width: $sizebar-collapse-width;
-
-        .navbar-brand {
-          .brand-logo {
-            display: block;
-          }
-
-          .brand-title {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-  .app-sidebar {
-    width: $sizebar-collapse-width;
   }
 }

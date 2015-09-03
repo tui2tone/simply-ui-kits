@@ -1,0 +1,204 @@
+/*
+Sidebar Stylesheet
+*/
+
+$navbar-height: 70px;
+$navbar-font: 'Oxygen', sans-serif;
+
+
+$sizebar-width: 280px;
+$sizebar-collapse-width: 70px;
+
+$menu-item-height: 60px;
+$menu-item-child-height: 40px;
+
+// Sidebar Expand
+.app-container {
+  .app-sidebar {
+    width: $sizebar-width;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    padding-top: $navbar-height;
+
+    -webkit-transition: width 0.2s;
+    transition: width 0.2s;
+    z-index: 1000;
+
+    // Sidebar Menu
+    ul.sidebar-menu {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      padding: 10px 0px;
+
+      & > li {
+        & > a {
+          display: block;
+          text-decoration: none;
+          height: $menu-item-height;
+          line-height: $menu-item-height;
+          vertical-align: middle;
+          font-family: $navbar-font;
+          white-space : nowrap;
+
+          .icon {
+            font-size: 1.5em;
+            padding-left: 5px;
+            vertical-align: middle;
+            text-align: center;
+            width:  $menu-item-height;
+            height: $menu-item-height;
+            line-height: $menu-item-height;
+          }
+
+          .title {
+            vertical-align: middle;
+            padding-right: 5px;
+            height: $menu-item-height;
+            line-height: $menu-item-height;
+          }
+        }
+
+        ul.sidebar-sub-menu {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          padding: 5px 0px;
+
+          & > li {
+            & > a {
+              display: block;
+              text-decoration: none;
+              height: $menu-item-child-height;
+              line-height: $menu-item-child-height;
+              vertical-align: middle;
+              font-family: $navbar-font;
+              white-space : nowrap;
+
+              .icon {
+                font-size: 0.5em;
+                padding-left: 5px;
+                vertical-align: middle;
+                text-align: center;
+                height: $menu-item-child-height;
+                line-height: $menu-item-child-height;
+                width:  $menu-item-height;
+              }
+
+              .title {
+                vertical-align: middle;
+                padding-right: 5px;
+                padding-left: 2px;
+                font-size: 0.9em;
+                height: $menu-item-child-height;
+                line-height: $menu-item-child-height;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Sidebar Collapse
+.app-container.app-sidebar-collapse {
+  .app-header {
+    .navbar.navbar-default {
+      .navbar-header {
+        width: $sizebar-collapse-width;
+
+        .navbar-brand {
+          .brand-logo {
+            display: block;
+          }
+
+          .brand-title {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .app-sidebar {
+    width: $sizebar-collapse-width;
+    ul.sidebar-menu {
+      & > li {
+        position: relative;
+        & > a {
+          .title {
+            display: none;
+          }
+        }
+
+        ul.sidebar-sub-menu {
+          animation-name: sidebar-sub-menu-show;
+          -webkit-animation-name: sidebar-sub-menu-show;
+          -webkit-animation-duration: 0.2s;
+          position: absolute;
+          display: none;
+          top: 0;
+          width: ($sizebar-width - 50px);
+          margin-left: $sizebar-collapse-width;
+          padding: 0px;
+          border-radius: 1px;
+          & > li {
+            & > a {
+              .icon {
+                width:  40px;
+              }
+              .title {
+                font-family: $navbar-font;
+                font-size: 0.8em;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+        ul.sidebar-sub-menu::before {
+          content: '';
+          position: absolute;
+          display: block;
+          margin-left: -10px;
+          top: 20px;
+        	width: 0;
+        	height: 0;
+
+        	border-top: 10px solid transparent;
+        	border-bottom: 10px solid transparent;
+          border-right-width: 10px;
+          border-right-style: solid;
+        }
+      }
+      & > li:hover {
+        ul.sidebar-sub-menu {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@keyframes sidebar-sub-menu-show {
+    from {
+      left: 20px;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+}
+
+
+@keyframes sidebar-expand {
+    from {
+      left: 20px;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+}

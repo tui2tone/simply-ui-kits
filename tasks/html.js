@@ -9,7 +9,7 @@ gulp.task('html', function() {
   gulp.src(['./node_modules/font-awesome/**/*',]).pipe(gulp.dest('./public/lib/font-awesome'))
 
 
-  return gulp.src(['./app/html/**/*.html', '!./app/html/include/*.html'])
+  return gulp.src(['./app/**/*.html', '!./app/include/*.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
