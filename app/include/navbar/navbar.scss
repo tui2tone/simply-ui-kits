@@ -40,7 +40,7 @@ $sizebar-collapse-width: 70px;
           line-height: $navbar-height;
           vertical-align: middle;
           text-align: center;
-          font-size: 1.2em;
+          font-size: 1.25em;
           text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
           font-weight: 400;
 
@@ -58,6 +58,7 @@ $sizebar-collapse-width: 70px;
       .navbar-collapse {
         ul.nav:not(.navbar-right) {
           & > li {
+            height: $navbar-height;
             line-height: $navbar-height;
             vertical-align: middle;
 
@@ -80,7 +81,7 @@ $sizebar-collapse-width: 70px;
               margin-bottom: 0;
 
               & > li {
-                font-size: 0.90em;
+                font-size: 1em;
                 font-weight: 600;
                 font-family: $navbar-font;
                 float: left;

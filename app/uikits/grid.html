@@ -1,0 +1,80 @@
+@@include('../include/header/header.html',{ "path": "../.." })
+<div class="app-content-header">
+  <div class="header">
+    <div class="title">Grid</div>
+    <div class="description">Bootstrap Grid Systems 12 Column</div>
+  </div>
+</div>
+<div class="app-content">
+  <div class="content-row">
+    <div>
+      <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+      <div class="row example">
+        <div class="col-xs-12 col-md-8">
+          <div>.col-xs-12 .col-md-8</div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <div>.col-xs-6 .col-md-4</div>
+        </div>
+      </div>
+      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+      <div class="row example">
+        <div class="col-xs-6 col-md-4">
+          <div>.col-xs-6 .col-md-4</div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <div>.col-xs-6 .col-md-4</div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <div>.col-xs-6 .col-md-4</div>
+        </div>
+      </div>
+      <!-- Columns are always 50% wide, on mobile and desktop -->
+      <div class="row example">
+        <div class="col-xs-6">
+          <div>.col-xs-6</div>
+        </div>
+        <div class="col-xs-6">
+          <div>.col-xs-6</div>
+        </div>
+      </div>
+    </div>
+    <h4>Customize</h4>
+    <div class="sub-title">No Gap between Column
+      <span class="description">( with .no-gap class )</span>
+    </div>
+    <div>
+      <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+      <div class="row no-gap example">
+        <div class="col-xs-12 col-md-8">
+          <div>.col-xs-12 .col-md-8</div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <div>.col-xs-6 .col-md-4</div>
+        </div>
+      </div>
+      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+      <div class="row no-gap example">
+        <div class="col-xs-6 col-md-4">
+          <div>.col-xs-6 .col-md-4</div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <div>.col-xs-6 .col-md-4</div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <div>.col-xs-6 .col-md-4</div>
+        </div>
+      </div>
+      <!-- Columns are always 50% wide, on mobile and desktop -->
+      <div class="row no-gap example">
+        <div class="col-xs-6">
+          <div>.col-xs-6</div>
+        </div>
+        <div class="col-xs-6">
+          <div>.col-xs-6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@@include('../include/footer/footer.html',{ "path": "../.." })

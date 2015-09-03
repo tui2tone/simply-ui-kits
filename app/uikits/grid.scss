@@ -1,0 +1,10 @@
+.row.example {
+  & > [class*="col-"] {
+    & > div {
+      background-color: #FFF;
+      border: 1px solid #DDD;
+      padding: 10px;
+      border-radius: 2px;
+    }
+  }
+}

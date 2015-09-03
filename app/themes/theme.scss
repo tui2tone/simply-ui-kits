@@ -4,8 +4,14 @@ $color-white-grey: #EEE;
 $color-green: #36B846;
 $color-green-dark: #18a328;
 $color-yellow: #FEC606;
+$color-yellow-dark: #f3bc00;
 $color-orange: #E75926;
+$color-light-blue: #22A7F0;
+$color-light-blue-dark: #0e94de;
 $color-blue: #2C82C9;
+$color-blue-dark: #166cb2;
+$color-red: #CF000F;
+$color-red-dark: #b30410;
 $color-near-black: #333333;
 $color-black: #212121;
 
@@ -133,6 +139,14 @@ $color-black: #212121;
     }
   }
 
+  // Card Styles
+  .card {
+    background-color: $color-white;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
+  }
+
   // Card Summary
   .card.card-summary {
     background-color: $color-white;
@@ -164,5 +178,46 @@ $color-black: #212121;
   .card.card-summary.card-success.card-light {
     background-color: $color-white;
     color: $color-green;
+  }
+
+  // Button
+  .btn-primary {
+    background-color: $color-blue;
+    border-color: $color-blue-dark;
+  }
+  .btn-primary:hover {
+    background-color: $color-blue-dark;
+  }
+  .btn-success {
+    background-color: $color-green;
+    border-color: $color-green-dark;
+  }
+  .btn-success:hover {
+    background-color: $color-green-dark;
+  }
+  .btn-warning {
+    background-color: $color-yellow;
+    border-color: $color-yellow-dark;
+  }
+  .btn-warning:hover {
+    background-color: $color-yellow-dark;
+  }
+  .btn-danger {
+    background-color: $color-red;
+    border-color: $color-red-dark;
+  }
+  .btn-danger:hover {
+    background-color: $color-red-dark;
+  }
+  .btn-info {
+    background-color: $color-light-blue;
+    border-color: $color-light-blue-dark;
+  }
+  .btn-info:hover {
+    background-color: $color-light-blue-dark;
+  }
+
+  .btn-link {
+    color: $color-blue-dark;
   }
 }
