@@ -9,7 +9,7 @@ $navbar-font: 'Oxygen', sans-serif;
 $sizebar-width: 280px;
 $sizebar-collapse-width: 70px;
 
-$menu-item-width: 60px;
+$menu-item-width: 68px;
 $menu-item-height: 55px;
 $menu-item-child-height: 40px;
 
@@ -44,10 +44,10 @@ $menu-item-child-height: 40px;
           vertical-align: middle;
           font-family: $navbar-font;
           white-space : nowrap;
+          position: relative;
 
           .icon {
             font-size: 1.5em;
-            padding-left: 5px;
             vertical-align: middle;
             text-align: center;
             width:  $menu-item-width;
@@ -61,14 +61,67 @@ $menu-item-child-height: 40px;
             height: $menu-item-height;
             line-height: $menu-item-height;
           }
+          .badge {
+            position: absolute;
+            right: 20px;
+            height: 20px;
+            line-height: 20px;
+            min-width: 20px;
+            padding: 0 5px;
+            vertical-align: middle;
+            font-size: 10px;
+            top: ($menu-item-height / 2);
+            margin-top: -10px;
+
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+          }
         }
 
-        ul.sidebar-sub-menu {
+        & > a.sidebar-toggle {
+          .badge {
+            right: 40px;
+          }
+        }
+
+      }
+      & > li.dropdown {
+        position: relative;
+        display: block;
+
+        & > a {
+          .badge {
+            right: 40px;
+          }
+        }
+
+        & > a::after {
+           font-family: FontAwesome;
+           content: "\f107";
+           position: absolute;
+           right: 20px;
+           height: 20px;
+           line-height: 20px;
+           top: ($menu-item-height / 2);
+           margin-top: -10px;
+
+           -webkit-transition: all 0.2s;
+           transition: all 0.2s;
+           opacity: 1;
+        }
+
+        ul.dropdown-menu {
           margin: 0;
           padding: 0;
           list-style: none;
           height: 0;
           overflow: hidden;
+          display: block;
+          position: relative;
+          width: 100%;
+          border-radius: 0;
+          border: 0;
+          box-shadow: none;
 
           -webkit-transition: all 0.2s;
           transition: all 0.2s;
@@ -82,6 +135,7 @@ $menu-item-child-height: 40px;
               vertical-align: middle;
               font-family: $navbar-font;
               white-space : nowrap;
+              padding: 0;
 
               .icon {
                 font-size: 0.6em;
@@ -97,12 +151,26 @@ $menu-item-child-height: 40px;
                 vertical-align: middle;
                 padding-right: 5px;
                 padding-left: 2px;
-                font-size: 1em;
+                font-size: 12px;
                 height: $menu-item-child-height;
                 line-height: $menu-item-child-height;
               }
             }
           }
+        }
+      }
+      & > li.dropdown::after {
+        clear: both;
+        content: '';
+        position: relative;
+        display: block;
+      }
+
+      & > li.dropdown.open {
+        & > a::after {
+          -ms-transform: rotate(180deg); /* IE 9 */
+          -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+          transform: rotate(180deg);
         }
       }
       & > li.header {
@@ -115,6 +183,8 @@ $menu-item-child-height: 40px;
         height: 2px;
         margin-top: 10px;
         margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   }
@@ -148,9 +218,27 @@ $menu-item-child-height: 40px;
           .title {
             display: none;
           }
-        }
 
-        ul.sidebar-sub-menu {
+          .badge {
+            position: absolute;
+            right: 18px;
+            height: 14px;
+            line-height: 14px;
+            min-width: 14px;
+            padding: 0 5px;
+            vertical-align: middle;
+            font-size: 8px;
+            top: ($menu-item-height / 2);
+            margin-top: -14px;
+          }
+        }
+      }
+      & > li.dropdown {
+        & > a::after {
+          display: none;
+          opacity: 0;
+        }
+        ul.dropdown-menu {
           animation-name: sidebar-sub-menu-show;
           -webkit-animation-name: sidebar-sub-menu-show;
           -webkit-animation-duration: 0.2s;
@@ -173,10 +261,23 @@ $menu-item-child-height: 40px;
                 font-family: $navbar-font;
                 font-weight: bold;
               }
+
+              .badge {
+                position: absolute;
+                right: 20px;
+                height: 14px;
+                line-height: 14px;
+                min-width: 14px;
+                padding: 0 5px;
+                vertical-align: middle;
+                font-size: 8px;
+                top: ($menu-item-height / 2);
+                margin-top: -10px;
+              }
             }
           }
         }
-        ul.sidebar-sub-menu::before {
+        ul.dropdown-menu::before {
           content: '';
           position: absolute;
           display: block;
@@ -191,13 +292,144 @@ $menu-item-child-height: 40px;
           border-right-style: solid;
         }
       }
-      & > li:hover {
-        ul.sidebar-sub-menu {
+      & > li.dropdown:hover {
+        ul.dropdown-menu {
           display: block;
         }
       }
       & > li.header {
         display: none;
+      }
+    }
+  }
+}
+// Sidebar Top
+.app-container.app-sidebar-top {
+  .app-sidebar {
+    width: 100%;
+    height: $menu-item-height + $navbar-height;
+    min-height: $menu-item-height + $navbar-height;
+    position: absolute;
+    left: 0;
+
+    -webkit-transition: width 0.2s;
+    transition: width 0.2s;
+    z-index: 1000;
+    overflow-y: visible;
+
+    ul.sidebar-menu {
+      padding: 0px;
+      & > li {
+        position: relative;
+        float: left;
+        width: $sizebar-collapse-width;
+        & > a {
+          .icon {
+            width:  $sizebar-collapse-width;
+          }
+
+          .title {
+            display: none;
+          }
+
+          .badge {
+            position: absolute;
+            right: 18px;
+            height: 14px;
+            line-height: 14px;
+            min-width: 14px;
+            padding: 0 5px;
+            vertical-align: middle;
+            font-size: 8px;
+            top: ($menu-item-height / 2);
+            margin-top: -14px;
+          }
+        }
+      }
+
+      & > li.dropdown {
+        & > a::after {
+          display: none;
+          opacity: 0;
+        }
+        ul.dropdown-menu {
+          animation-name: sidebar-sub-menu-show;
+          -webkit-animation-name: sidebar-sub-menu-show;
+          -webkit-animation-duration: 0.2s;
+          position: absolute;
+          display: none;
+          top: 0;
+          width: ($sizebar-width - 50px);
+          margin-left: $sizebar-collapse-width;
+          padding: 0px;
+          border-radius: 1px;
+          overflow: visible;
+          height: auto !important;
+
+          & > li {
+            & > a {
+              .icon {
+                width:  40px;
+              }
+              .title {
+                font-family: $navbar-font;
+                font-weight: bold;
+              }
+
+              .badge {
+                position: absolute;
+                right: 20px;
+                height: 14px;
+                line-height: 14px;
+                min-width: 14px;
+                padding: 0 5px;
+                vertical-align: middle;
+                font-size: 8px;
+                top: ($menu-item-height / 2);
+                margin-top: -10px;
+              }
+            }
+          }
+        }
+        ul.dropdown-menu::before {
+          content: '';
+          position: absolute;
+          display: block;
+          margin-left: -10px;
+          top: 20px;
+        	width: 0;
+        	height: 0;
+
+        	border-top: 10px solid transparent;
+        	border-bottom: 10px solid transparent;
+          border-right-width: 10px;
+          border-right-style: solid;
+        }
+      }
+
+      & > li.dropdown:hover {
+        ul.dropdown-menu {
+          display: block;
+        }
+      }
+      & > li.header {
+        display: none;
+      }
+
+      & > li.line {
+        width: 2px;
+        margin-top: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0;
+        height: $menu-item-height;
+      }
+
+      & > li.dropdown {
+
+        & > a::after {
+          display: none;
+        }
       }
     }
   }
