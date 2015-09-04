@@ -9,14 +9,16 @@ $navbar-font: 'Oxygen', sans-serif;
 $sizebar-width: 280px;
 $sizebar-collapse-width: 70px;
 
-$menu-item-height: 60px;
+$menu-item-width: 60px;
+$menu-item-height: 55px;
 $menu-item-child-height: 40px;
 
 // Sidebar Expand
 .app-container {
   .app-sidebar {
     width: $sizebar-width;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     position: absolute;
     left: 0;
     padding-top: $navbar-height;
@@ -24,6 +26,7 @@ $menu-item-child-height: 40px;
     -webkit-transition: width 0.2s;
     transition: width 0.2s;
     z-index: 1000;
+    overflow-y: visible;
 
     // Sidebar Menu
     ul.sidebar-menu {
@@ -47,7 +50,7 @@ $menu-item-child-height: 40px;
             padding-left: 5px;
             vertical-align: middle;
             text-align: center;
-            width:  $menu-item-height;
+            width:  $menu-item-width;
             height: $menu-item-height;
             line-height: $menu-item-height;
           }
@@ -64,7 +67,11 @@ $menu-item-child-height: 40px;
           margin: 0;
           padding: 0;
           list-style: none;
-          padding: 5px 0px;
+          height: 0;
+          overflow: hidden;
+
+          -webkit-transition: all 0.2s;
+          transition: all 0.2s;
 
           & > li {
             & > a {
@@ -83,7 +90,7 @@ $menu-item-child-height: 40px;
                 text-align: center;
                 height: $menu-item-child-height;
                 line-height: $menu-item-child-height;
-                width:  $menu-item-height;
+                width: $menu-item-width;
               }
 
               .title {
@@ -97,6 +104,17 @@ $menu-item-child-height: 40px;
             }
           }
         }
+      }
+      & > li.header {
+        font-family: $navbar-font;
+        padding: 5px 25px;
+        font-size: 0.9em;
+      }
+
+      & > li.line {
+        height: 2px;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
     }
   }
@@ -143,6 +161,9 @@ $menu-item-child-height: 40px;
           margin-left: $sizebar-collapse-width;
           padding: 0px;
           border-radius: 1px;
+          overflow: visible;
+          height: auto !important;
+
           & > li {
             & > a {
               .icon {
@@ -174,6 +195,9 @@ $menu-item-child-height: 40px;
         ul.sidebar-sub-menu {
           display: block;
         }
+      }
+      & > li.header {
+        display: none;
       }
     }
   }

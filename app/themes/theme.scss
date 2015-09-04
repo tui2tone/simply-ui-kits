@@ -14,6 +14,7 @@ $color-red: #CF000F;
 $color-red-dark: #b30410;
 $color-near-black: #333333;
 $color-black: #212121;
+$color-black-dark: #121212;
 
 .flatio-green {
   background-color: $color-white-grey;
@@ -59,6 +60,37 @@ $color-black: #212121;
               }
             }
           }
+
+          ul.nav.navbar-right {
+            & > li.profile {
+              .dropdown-profile {
+                border: 0px;
+                -webkit-box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.2);
+                -moz-box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.2);
+                box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.2);
+
+                .profile-img {
+                  background: $color-green;
+                  background: -moz-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+                  background: -webkit-gradient(left top, left bottom, color-stop(0%, $color-green), color-stop(50%, $color-green), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+                  background: -webkit-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+                  background: -o-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+                  background: -ms-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+                  background: linear-gradient(to bottom, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+                  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0 );
+                }
+              }
+              .dropdown-profile::before {
+                border-bottom-color: $color-green;
+              }
+            }
+            & > li.profile.open {
+              & > a {
+                background-color: $color-white;
+                color: $color-black;
+              }
+            }
+          }
       }
     }
 
@@ -96,9 +128,19 @@ $color-black: #212121;
 
         & > li.active {
           & > a {
+            background-color: rgba(0,0,0,0.3);
             border-left: 2px solid $color-green;
             color: $color-green;
           }
+        }
+
+        & > li.header {
+          color: $color-white;
+          opacity: 0.5;
+        }
+
+        & > li.line {
+          background-color: $color-black-dark;
         }
       }
     }
