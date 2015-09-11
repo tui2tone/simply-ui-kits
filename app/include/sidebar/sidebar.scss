@@ -454,6 +454,12 @@ $menu-item-child-height: 40px;
   $sizebar-collapse-width: 60px;
   $menu-item-width: 58px;
 
+  .app-container {
+    .app-sidebar {
+      width: 100%;
+    }
+  }
+
   .app-container.app-sidebar-top {
     .app-sidebar {
       width: 100%;

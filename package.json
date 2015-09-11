@@ -1,20 +1,22 @@
 {
   "name": "flatio-admin-templates",
   "dependencies": {
-    "jquery": "*",
-    "bootstrap": "*",
-    "font-awesome": "*"
+    "jquery": "2.1.4",
+    "bootstrap": "3.3.5",
+    "font-awesome": "4.4.0",
+    "chartist": "0.9.4",
+    "datatables": "1.10.8"
   },
   "devDependencies": {
-    "gulp": "*",
-    "gulp-coffee": "*",
-    "gulp-sass": "*",
+    "gulp": "3.9.0",
+    "gulp-coffee": "2.3.1",
+    "gulp-sass": "2.0.4",
     "gulp-inject": "*",
     "require-dir": "*",
     "run-sequence": "*",
     "gulp-util": "*",
     "gulp-usemin": "*",
-    "gulp-uglify": "*",
+    "gulp-uglify": "1.4.1",
     "gulp-minify-css": "*",
     "gulp-minify-html": "*",
     "gulp-rev": "*",

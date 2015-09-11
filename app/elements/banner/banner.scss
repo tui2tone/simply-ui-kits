@@ -2,7 +2,7 @@ $font: 'Oxygen', sans-serif;
 
 .card.card-summary {
   width: 100%;
-  border-radius: 2px;
+  border-radius: 1px;
 
   .card-body {
     overflow: hidden;
@@ -10,7 +10,8 @@ $font: 'Oxygen', sans-serif;
     .icon {
       float: left;
       font-size: 8.5em;
-      margin-bottom: -18px;
+      margin-top: -8px;
+      margin-bottom: -8px;
       margin-left: 10px;
     }
 
@@ -28,7 +29,7 @@ $font: 'Oxygen', sans-serif;
         font-size: 0.9em;
         font-weight: bold;
         margin-top: -10px;
-        padding-right: 4px;
+        padding-right: 2px;
       }
     }
   }
