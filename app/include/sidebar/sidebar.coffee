@@ -4,12 +4,30 @@ $ ->
 
   $('li.dropdown > a').bind 'click', (e) ->
     e.preventDefault()
-    next = $(this).next()
-    if next.hasClass('dropdown-menu')
-      next.toggleClass('open')
-      if next.height() == 0
-        autoHeight = next.css('height', 'auto').height()
-        next.height(0)
-        next.stop().animate({ height: autoHeight }, 0);
-      else
-        next.css('height', 0)
+    next = $(this).siblings( ".dropdown-menu" )
+    next.toggleClass('open')
+    if next.height() == 0
+      autoHeight = next.css('height', 'auto').height()
+      next.height(0)
+      next.stop().animate({ height: autoHeight }, 0);
+    else
+      next.css('height', 0)
+
+  MenuDropdownFixPositions($('.app-sidebar-top li.dropdown > a'))
+
+  $('.app-sidebar-top li.dropdown > a').bind 'mouseenter click', (e) ->
+    e.preventDefault()
+    MenuDropdownPosition(this)
+
+
+MenuDropdownFixPositions = (elements) ->
+  elements.each( ->
+    MenuDropdownPosition(this)
+    )
+
+MenuDropdownPosition = (elm) ->
+  next = $(elm).siblings( ".dropdown-menu" )
+  position = $(elm).offset();
+
+  next.css('top', position.top + "px")
+  next.css('left', position.left + "px")

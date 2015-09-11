@@ -192,23 +192,6 @@ $menu-item-child-height: 40px;
 
 // Sidebar Collapse
 .app-container.app-sidebar-collapse {
-  .app-header {
-    .navbar.navbar-default {
-      .navbar-header {
-        width: $sizebar-collapse-width;
-
-        .navbar-brand {
-          .brand-logo {
-            display: block;
-          }
-
-          .brand-title {
-            display: none;
-          }
-        }
-      }
-    }
-  }
   .app-sidebar {
     width: $sizebar-collapse-width;
     ul.sidebar-menu {
@@ -316,12 +299,18 @@ $menu-item-child-height: 40px;
     transition: width 0.2s;
     z-index: 1000;
     overflow-y: visible;
+    overflow-x: scroll;
+    white-space: nowrap;
 
     ul.sidebar-menu {
+      height: 100%;
       padding: 0px;
+      position: relative;
       & > li {
         position: relative;
-        float: left;
+        display: inline-block;
+        vertical-align: top;
+        float: none;
         width: $sizebar-collapse-width;
         & > a {
           .icon {
@@ -353,14 +342,14 @@ $menu-item-child-height: 40px;
           opacity: 0;
         }
         ul.dropdown-menu {
-          animation-name: sidebar-sub-menu-show;
-          -webkit-animation-name: sidebar-sub-menu-show;
+          animation-name: top-menu-dropdown;
+          -webkit-animation-name: top-menu-dropdown;
           -webkit-animation-duration: 0.2s;
-          position: absolute;
+          position: fixed;
           display: none;
-          top: 0;
           width: ($sizebar-width - 50px);
-          margin-left: $sizebar-collapse-width;
+          margin-left: 15px;
+          margin-top: $menu-item-height;
           padding: 0px;
           border-radius: 1px;
           overflow: visible;
@@ -392,18 +381,23 @@ $menu-item-child-height: 40px;
           }
         }
         ul.dropdown-menu::before {
+          display: none;
+        }
+
+        ul.dropdown-menu::after {
           content: '';
           position: absolute;
           display: block;
-          margin-left: -10px;
-          top: 20px;
+          margin-left: 10px;
+          top: -10px;
         	width: 0;
         	height: 0;
 
-        	border-top: 10px solid transparent;
-        	border-bottom: 10px solid transparent;
-          border-right-width: 10px;
-          border-right-style: solid;
+          border-top: none;
+          border-left: 10px solid transparent;
+        	border-right: 10px solid transparent;
+          border-bottom-width: 10px;
+          border-bottom-style: solid;
         }
       }
 
@@ -435,6 +429,48 @@ $menu-item-child-height: 40px;
   }
 }
 
+@media (max-width: 767px) {
+  $sizebar-collapse-width: 0px;
+  .app-container.app-sidebar-collapse {
+    .app-sidebar {
+      width: $sizebar-collapse-width;
+      ul.sidebar-menu {
+        display: none;
+        & > li {
+          & > a {
+            width: $menu-item-width;
+
+            .icon {
+              width: $menu-item-width;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  $sizebar-collapse-width: 60px;
+  $menu-item-width: 58px;
+
+  .app-container.app-sidebar-top {
+    .app-sidebar {
+      width: 100%;
+      ul.sidebar-menu {
+        & > li {
+          width: $sizebar-collapse-width;
+          & > a {
+            .icon {
+              width: $sizebar-collapse-width;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @keyframes sidebar-sub-menu-show {
     from {
       left: 20px;
@@ -454,6 +490,17 @@ $menu-item-child-height: 40px;
     }
     to {
       left: 0;
+      opacity: 1;
+    }
+}
+
+@keyframes top-menu-dropdown {
+    from {
+      margin-top: $menu-item-height + 20px;
+      opacity: 0;
+    }
+    to {
+      margin-top: $menu-item-height;
       opacity: 1;
     }
 }

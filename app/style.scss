@@ -23,6 +23,11 @@ html, body {
   font-family: $font;
 }
 
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 *:focus {
     outline: 0;
 }
@@ -48,6 +53,22 @@ html, body {
   }
 }
 
+.no-p {
+  padding: 0 !important;
+}
+
+.no-pt{
+  padding-top: 0 !important
+}
+
+.no-mb {
+  margin-bottom: 0 !important;
+}
+
+.no-br {
+  border-radius: 0 !important;
+}
+
 // App
 .app-container {
   height: 100%;
@@ -60,11 +81,12 @@ html, body {
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
     height: 100%;
+    width: 100%;
+    min-width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
 
     .app-content-header {
-
       .header {
         display: block;
         padding: 30px;
@@ -85,15 +107,13 @@ html, body {
     }
 
     .app-content {
+      padding-top: 30px;
       .content-row {
         padding: 0px 30px 0px 30px;
       }
       .content-row.no-p {
         padding: 0;
       }
-    }
-    .app-content.p-t-20 {
-      padding-top: 30px;
     }
   }
 }
@@ -109,4 +129,21 @@ html, body {
     padding-left: 0 !important;
     padding-top: $navbar-height + $menu-item-height;
   }
+}
+
+
+@media (max-width: 767px) {
+  $sizebar-collapse-width: 0px;
+  .app-container.app-sidebar-collapse {
+    .app-content-container {
+      padding-left: $sizebar-collapse-width;
+    }
+  }
+}
+
+// Global
+// Progress Bar
+.progress {
+  height: 16px;
+  border-radius: 2px;
 }

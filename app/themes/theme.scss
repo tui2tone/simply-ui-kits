@@ -1,22 +1,21 @@
-$color-white: #FFF;
-$color-white-smoke: #F9F9F9;
-$color-white-grey: #EEE;
-$color-green: #36B846;
+$color-white: #fff;
+$color-white-smoke: #f9f9f9;
+$color-white-grey: #eee;
+$color-green: #36b846;
 $color-green-dark: #18a328;
-$color-yellow: #FEC606;
+$color-yellow: #fec606;
 $color-yellow-dark: #f3bc00;
-$color-orange: #E75926;
-$color-light-blue: #22A7F0;
+$color-orange: #e75926;
+$color-light-blue: #22a7f0;
 $color-light-blue-dark: #0e94de;
-$color-blue: #2C82C9;
+$color-blue: #2c82c9;
 $color-blue-dark: #166cb2;
-$color-red: #CF000F;
+$color-red: #cf000f;
 $color-red-dark: #b30410;
-$color-near-black: #333333;
+$color-light-black: #333;
 $color-black: #212121;
 $color-black-dark: #121212;
-$color-black-light-dark: #1A1A1A;
-
+$color-black-light-dark: #1a1a1a;
 .flatio-green {
   background-color: $color-white-grey;
   .app-container {
@@ -24,96 +23,109 @@ $color-black-light-dark: #1A1A1A;
     .app-header {
       .navbar.navbar-default {
         background-color: $color-white;
-          .navbar-header {
+        .navbar-header {
+          .navbar-brand {
             background-color: $color-green;
-            .navbar-brand {
-              color: $color-white;
+            color: $color-white;
+          }
+          .navbar-toggle-container {
+            .btn {
+              background-color: $color-white;
             }
           }
-
-          .navbar-collapse {
-            ul.nav {
-              & > li {
-                .btn-search , .btn-toggle-sidebar, ol.breadcrumb {
-                  background-color: $color-white;
-                }
-                ol.breadcrumb {
-                  & > li {
-                    color: $color-black;
-                    font-weight: bold;
-                    & > a {
-                      color: $color-black;
-                    }
-                  }
-                  & > li+li:before {
-                    color: $color-black;
-                  }
-                  & > li.active {
-                    color: $color-green-dark;
-                  }
-                }
-              }
-              & > li.br {
-                border-right: 1px solid $color-white-smoke;
-              }
-              & > li.bl {
-                border-left: 1px solid $color-white-smoke;
-              }
-            }
-          }
-
-          ul.nav.navbar-right {
-            & > li.profile {
-              .dropdown-profile {
-                border: 0px;
-                -webkit-box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.2);
-                -moz-box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.2);
-                box-shadow: -1px 1px 2px 0px rgba(0,0,0,0.2);
-
-                .profile-img {
-                  background: $color-green;
-                  background: -moz-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
-                  background: -webkit-gradient(left top, left bottom, color-stop(0%, $color-green), color-stop(50%, $color-green), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
-                  background: -webkit-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
-                  background: -o-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
-                  background: -ms-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
-                  background: linear-gradient(to bottom, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
-                  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0 );
-                }
-              }
-              .dropdown-profile::before {
-                border-bottom-color: $color-green;
-              }
-            }
-            & > li.profile.open {
-              & > a {
+        }
+        .navbar-collapse {
+          ul.nav {
+            & > li {
+              .btn-search,
+              ol.breadcrumb {
                 background-color: $color-white;
-                color: $color-black;
+              }
+              ol.breadcrumb {
+                & > li {
+                  color: $color-black;
+                  font-weight: bold;
+                  & > a {
+                    color: $color-black;
+                  }
+                }
+                & > li+li:before {
+                  color: $color-black;
+                }
+                & > li.active {
+                  color: $color-green-dark;
+                }
               }
             }
           }
+        }
+        ul.nav {
+          & > li {
+            & > a {
+              color: $color-light-black;
+            }
+          }
+          & > li.notify {
+            & > a {
+              .badge {
+                background-color: $color-green;
+              }
+            }
+          }
+          & > li.br {
+            border-right: 1px solid $color-white-smoke;
+          }
+          & > li.bl {
+            border-left: 1px solid $color-white-smoke;
+          }
+        }
+        ul.nav.navbar-right {
+          & > li.profile {
+            .dropdown-profile {
+              border: 0;
+              -webkit-box-shadow: -1px 1px 2px 0 rgba(0,0,0,0.2);
+              -moz-box-shadow: -1px 1px 2px 0 rgba(0,0,0,0.2);
+              box-shadow: -1px 1px 2px 0 rgba(0,0,0,0.2);
+              .profile-img {
+                background: $color-green;
+                background: -moz-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+                background: -webkit-gradient(left top, left bottom, color-stop(0%, $color-green), color-stop(50%, $color-green), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+                background: -webkit-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+                background: -o-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+                background: -ms-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+                background: linear-gradient(to bottom, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+                filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0 );
+              }
+            }
+            .dropdown-profile::before {
+              border-bottom-color: $color-green;
+            }
+          }
+          & > li.profile.open {
+            & > a {
+              background-color: $color-white;
+              color: $color-black;
+            }
+          }
+        }
       }
     }
-
     .app-sidebar {
       background-color: $color-black;
-      -webkit-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.1);
-      -moz-box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.1);
-      box-shadow: 1px 0px 2px 0px rgba(0,0,0,0.1);
-
+      -webkit-box-shadow: 1px 0 2px 0 rgba(0,0,0,0.1);
+      -moz-box-shadow: 1px 0 2px 0 rgba(0,0,0,0.1);
+      box-shadow: 1px 0 2px 0 rgba(0,0,0,0.1);
       ul.sidebar-menu {
         & > li {
           & > a {
             border-left: 2px solid transparent;
             border-bottom: 0;
             color: $color-white;
-
             .badge {
               color: $color-white;
               background-color: $color-green;
             }
           }
-
           & > a:hover {
             color: $color-green;
           }
@@ -121,19 +133,16 @@ $color-black-light-dark: #1A1A1A;
         & > li.dropdown {
           ul.dropdown-menu {
             background-color: rgba(255,255,255,0.05);
-
             & > li {
               & > a {
-                  color: $color-white;
+                color: $color-white;
               }
-
               & > a:hover {
                 color: $color-green;
               }
             }
           }
         }
-
         & > li.active {
           & > a {
             background-color: rgba(0,0,0,0.3);
@@ -141,28 +150,25 @@ $color-black-light-dark: #1A1A1A;
             color: $color-green;
           }
         }
-
         & > li.header {
           color: $color-white;
           opacity: 0.5;
         }
-
         & > li.line {
           background-color: $color-black-light-dark;
         }
       }
     }
   }
-
   .app-container.app-sidebar-collapse {
     .app-sidebar {
       ul.sidebar-menu {
         & > li.dropdown {
           ul.dropdown-menu {
             background-color: $color-white;
-            -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.15);
-            -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.15);
-            box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.15);
+            -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.15);
+            -moz-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.15);
+            box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.15);
             & > li {
               border-bottom: 1px solid $color-white-smoke;
               & > a {
@@ -174,18 +180,15 @@ $color-black-light-dark: #1A1A1A;
             }
           }
           ul.dropdown-menu::before {
-          	border-right-color: $color-white;
+            border-right-color: $color-white;
           }
         }
-
         & > li.active {
           background-color: rgba(0,0,0,0.3);
         }
-
       }
     }
   }
-
   .app-container.app-sidebar-top {
     .app-sidebar {
       ul.sidebar-menu {
@@ -195,6 +198,29 @@ $color-black-light-dark: #1A1A1A;
             border-bottom: 2px solid transparent;
           }
         }
+        & > li.active {
+          border-bottom: 2px solid $color-green;
+        }
+        & > li.dropdown {
+          ul.dropdown-menu {
+            background-color: $color-white;
+            -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.15);
+            -moz-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.15);
+            box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.15);
+            & > li {
+              border-bottom: 1px solid $color-white-smoke;
+              & > a {
+                color: $color-black;
+              }
+              & > a:hover {
+                color: $color-green;
+              }
+            }
+          }
+          ul.dropdown-menu::after {
+            border-bottom-color: $color-white;
+          }
+        }
       }
     }
   }
@@ -202,19 +228,18 @@ $color-black-light-dark: #1A1A1A;
   // Card Styles
   .card {
     background-color: $color-white;
-    -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
   }
 
   // Card Summary
   .card.card-summary {
     background-color: $color-white;
-    -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
   }
-
   .card.card-summary.card-green {
     background-color: $color-green;
     color: $color-white;
@@ -276,8 +301,34 @@ $color-black-light-dark: #1A1A1A;
   .btn-info:hover {
     background-color: $color-light-blue-dark;
   }
-
   .btn-link {
     color: $color-blue-dark;
+  }
+
+  // Badge Color
+  .badge.badge-dafault {
+
+  }
+  .badge.badge-success {
+    background-color: $color-green !important;
+  }
+  .badge.badge-danger {
+    background-color: $color-red !important;
+  }
+  .badge.badge-warning {
+    background-color: $color-yellow !important;
+  }
+  .badge.badge-primary {
+    background-color: $color-blue !important;
+  }
+  .badge.badge-info {
+    background-color: $color-light-blue !important;
+  }
+
+  // Progress Bar
+  .progress {
+    .progress-bar-success {
+      background-color: $color-green;
+    }
   }
 }
