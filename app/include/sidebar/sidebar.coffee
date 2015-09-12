@@ -2,7 +2,7 @@ $ ->
   $('.btn-toggle-sidebar').bind 'click', ->
     $('.app-container').toggleClass 'app-sidebar-collapse'
 
-  $('li.dropdown > a').bind 'click', (e) ->
+  $('.app-sidebar li.dropdown > a').bind 'click', (e) ->
     e.preventDefault()
     next = $(this).siblings( ".dropdown-menu" )
     next.toggleClass('open')
@@ -15,7 +15,7 @@ $ ->
 
   MenuDropdownFixPositions($('.app-sidebar-top li.dropdown > a'))
 
-  $('.app-sidebar-top li.dropdown > a').bind 'mouseenter click', (e) ->
+  $('.app-sidebar-top .app-sidebar li.dropdown > a').bind 'mouseenter click', (e) ->
     e.preventDefault()
     MenuDropdownPosition(this)
 

@@ -129,6 +129,20 @@ $sizebar-collapse-width: 70px;
           }
         }
         ul.nav {
+          & > li {
+            .dropdown-menu {
+              font-size: 12px;
+              padding: 0;
+              border-radius: 1px;
+              min-width: $sizebar-width;
+
+              & > li.title {
+                padding: 10px;
+                font-weight: bold;
+                font-family: $navbar-font;
+              }
+            }
+          }
           & > li.notify {
             & > a {
               width: $navbar-height;
@@ -148,6 +162,58 @@ $sizebar-collapse-width: 70px;
                 font-size: 8px;
                 top: ($navbar-height / 2);
                 margin-top: -16px;
+              }
+            }
+
+            .dropdown-menu {
+              margin-top: 2px;
+              ul.notifications {
+                margin-bottom: 0;
+                & > li {
+                  padding: 0;
+                  border: 0;
+                  overflow: hidden;
+                  & > a {
+                    text-decoration: none;
+                    display: block;
+                    padding: 10px;
+                    border:0;
+                    font-size: 12px;
+                    line-height: 20px;
+                    vertical-align: middle;
+
+                    .icon {
+                      font-size: 2.5em;
+                      margin-top: -10px;
+                      margin-bottom: -18px;
+                      margin-left: -10px;
+                      width: 40px;
+                      height: 36px;
+                      text-align: center;
+                      vertical-align: middle;
+                    }
+
+                    .badge {
+                      float: right;
+                      font-size: 10px;
+                      height: 20px;
+                      line-height: 20px;
+                      min-width: 20px;
+                      padding: 0 5px;
+                    }
+                  }
+
+                  & > a::after {
+                    clear: both;
+                    content: '';
+                    display: block;
+                  }
+                }
+
+                & > li.message {
+                  text-align: center;
+                  font-size: 9px;
+                }
               }
             }
           }
@@ -185,13 +251,19 @@ $sizebar-collapse-width: 70px;
               -webkit-animation-name: dropdown-animate;
               -webkit-animation-duration: 0.2s;
               .profile-img {
-                padding: 20px;
+                padding: 40px;
                 text-align: center;
                 img {
-                  width: 150px;
+                  width: 100px;
                   height: auto;
                   border-radius: 75px;
+                  border: 2px solid #FFF;
+                  padding: 0;
                 }
+              }
+              .profile-info {
+                text-align: center;
+                margin-top: -36px;
               }
             }
 
@@ -211,6 +283,7 @@ $sizebar-collapse-width: 70px;
               border-bottom-width: 10px;
               border-bottom-style: solid;
             }
+
           }
         }
       }
