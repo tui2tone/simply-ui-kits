@@ -264,6 +264,15 @@ $sizebar-collapse-width: 70px;
               .profile-info {
                 text-align: center;
                 margin-top: -36px;
+                margin-bottom: 20px;
+              }
+              .profile-footer {
+                text-align: center;
+                padding: 15px;
+
+                .btn {
+                  margin-bottom: 0;
+                }
               }
             }
 

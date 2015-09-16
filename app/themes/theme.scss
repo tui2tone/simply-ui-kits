@@ -1,17 +1,37 @@
 $color-white: #fff;
 $color-white-smoke: #f9f9f9;
 $color-white-grey: #eee;
+$color-light-grey: #DDD;
+$color-grey: #CCC;
+$color-dark-grey: #AAA;
+
 $color-green: #36b846;
 $color-green-dark: #18a328;
-$color-yellow: #fec606;
-$color-yellow-dark: #f3bc00;
+$color-green-darkest: #0f8e1e;
+$color-green-light-bg: lighten($color-green-dark, 57%);
+
+$color-yellow: #ffb400;
+$color-yellow-dark: #ff9c00;
+$color-yellow-darkest: #f18403;
+$color-yellow-light-bg: lighten($color-yellow-dark, 47%);
+
 $color-orange: #e75926;
-$color-light-blue: #22a7f0;
-$color-light-blue-dark: #0e94de;
+
+$color-light-blue: #2caef5;
+$color-light-blue-dark: #1599e1;
+$color-light-blue-darkest: #098bd3;
+$color-light-blue-light-bg: lighten($color-light-blue-dark, 47%);
+
 $color-blue: #4183D7;
-$color-blue-dark: #166cb2;
-$color-red: #cf000f;
-$color-red-dark: #b30410;
+$color-blue-dark: #2368bf;
+$color-blue-darkest: #1659ae;
+$color-blue-light-bg: lighten($color-blue-dark, 52%);
+
+$color-red: #e50011;
+$color-red-dark: #c1000e;
+$color-red-darkest: #a4000c;
+$color-red-light-bg: lighten($color-red-dark, 60%);
+
 $color-lighter-black: #666;
 $color-light-black: #464646;
 $color-black: #212121;
@@ -138,6 +158,10 @@ $color-black-light-dark: #1a1a1a;
                 background: -ms-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
                 background: linear-gradient(to bottom, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
                 filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0 );
+              }
+
+              .profile-footer {
+                background-color: $color-white-smoke;
               }
             }
             .dropdown-profile::before {
@@ -391,19 +415,48 @@ $color-black-light-dark: #1a1a1a;
 }
 
 // Button
+.btn {
+  .icon {
+    border-right-color: rgba(0,0,0,0.08);
+  }
+}
+.btn-default {
+  border-color: $color-grey;
+}
+.btn-default:hover {
+  background-color: $color-white-smoke;
+  border-color: $color-dark-grey;
+}
 .btn-primary {
   background-color: $color-blue;
   border-color: $color-blue-dark;
 }
 .btn-primary:hover {
   background-color: $color-blue-dark;
+  border-color: $color-blue-darkest;
 }
+.btn-primary.btn-light {
+  color: $color-blue;
+  border-color: $color-blue;
+}
+.btn-primary.btn-light:hover {
+  background-color: $color-blue-light-bg;
+}
+
 .btn-success {
   background-color: $color-green;
   border-color: $color-green-dark;
 }
 .btn-success:hover {
   background-color: $color-green-dark;
+  border-color:  $color-green-darkest;
+}
+.btn-success.btn-light {
+  color: $color-green-dark;
+  border-color: $color-green-dark;
+}
+.btn-success.btn-light:hover {
+  background-color: $color-green-light-bg;
 }
 .btn-warning {
   background-color: $color-yellow;
@@ -411,6 +464,14 @@ $color-black-light-dark: #1a1a1a;
 }
 .btn-warning:hover {
   background-color: $color-yellow-dark;
+  border-color: $color-yellow-darkest;
+}
+.btn-warning.btn-light {
+  color: $color-yellow-dark;
+  border-color: $color-yellow-dark;
+}
+.btn-warning.btn-light:hover {
+  background-color: $color-yellow-light-bg;
 }
 .btn-danger {
   background-color: $color-red;
@@ -418,6 +479,14 @@ $color-black-light-dark: #1a1a1a;
 }
 .btn-danger:hover {
   background-color: $color-red-dark;
+  border-color: $color-red-darkest;
+}
+.btn-danger.btn-light {
+  color: $color-red;
+  border-color: $color-red;
+}
+.btn-danger.btn-light:hover {
+  background-color: $color-red-light-bg;
 }
 .btn-info {
   background-color: $color-light-blue;
@@ -425,9 +494,21 @@ $color-black-light-dark: #1a1a1a;
 }
 .btn-info:hover {
   background-color: $color-light-blue-dark;
+  border-color: $color-light-blue-darkest;
+}
+.btn-info.btn-light {
+  color: $color-light-blue-dark;
+  border-color: $color-light-blue-dark;
+}
+.btn-info.btn-light:hover {
+  background-color: $color-light-blue-light-bg;
 }
 .btn-link {
   color: $color-blue-dark;
+}
+
+.btn-light {
+  background-color: $color-white;
 }
 
 // Badge Color
