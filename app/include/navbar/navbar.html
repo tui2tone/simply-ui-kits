@@ -24,8 +24,12 @@
           </li>
           <li>
             <ol class="breadcrumb">
-              <li><a href="#">Home</a></li>
-              <li class="active">Dashboard</li>
+              @@if(context.breadcrumb) {
+                @@if(breadcrumb.level2 != "") {
+                  <li>@@breadcrumb.level2</li>
+                }
+              }
+              <li class="active">@@breadcrumb.level1</li>
             </ol>
           </li>
         </ul>

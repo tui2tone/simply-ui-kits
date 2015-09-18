@@ -1,11 +1,19 @@
 @@include('../include/header/header.html',{ "path": "../.." })
+@@include('../include/navbar/navbar.html', {
+  "breadcrumb": {
+    "level2": "Table",
+    "level1": "Static Table"
+  }
+})
+@@include('../include/sidebar/sidebar.html')
+<div class="app-content-container">
 <div class="app-content-header">
   <div class="header">
     <div class="title">Static Table</div>
     <div class="description">A bootstrap table for display list of data.</div>
   </div>
 </div>
-<div class="app-content no-pt">
+<div class="app-content">
   <div class="content-row">
     <div class="panel panel-default">
       <div class="panel-heading">Todo List</div>
@@ -156,5 +164,6 @@
       </table>
     </div>
   </div>
+</div>
 </div>
 @@include('../include/footer/footer.html',{ "path": "../.." })

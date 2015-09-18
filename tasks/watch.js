@@ -4,6 +4,6 @@ var gulp = require("gulp"),
 gulp.task("watch", function() {
   gulp.watch(['./app/**/*.scss', '!./app/themes/**/*'],['style']);
   gulp.watch(['./app/themes/**/*.scss'],['theme']);
-  gulp.watch('./app/**/*.coffee',['coffee']);
+  gulp.watch('./app/**/*.coffee',['ui-coffee','page-coffee']);
   gulp.watch('./app/**/*.html',['html']);
 });

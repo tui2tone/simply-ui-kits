@@ -6,7 +6,8 @@
     "font-awesome": "4.4.0",
     "chartist": "0.9.4",
     "datatables": "1.10.8",
-    "awesome-bootstrap-checkbox": "0.3.6"
+    "awesome-bootstrap-checkbox": "0.3.6",
+    "jquery-match-height": "0.6.0"
   },
   "devDependencies": {
     "gulp": "3.9.0",

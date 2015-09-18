@@ -1,37 +1,30 @@
 $color-white: #fff;
 $color-white-smoke: #f9f9f9;
 $color-white-grey: #eee;
-$color-light-grey: #DDD;
-$color-grey: #CCC;
-$color-dark-grey: #AAA;
-
+$color-light-grey: #ddd;
+$color-grey: #ccc;
+$color-dark-grey: #aaa;
 $color-green: #36b846;
 $color-green-dark: #18a328;
 $color-green-darkest: #0f8e1e;
 $color-green-light-bg: lighten($color-green-dark, 57%);
-
 $color-yellow: #ffb400;
 $color-yellow-dark: #ff9c00;
 $color-yellow-darkest: #f18403;
 $color-yellow-light-bg: lighten($color-yellow-dark, 47%);
-
 $color-orange: #e75926;
-
 $color-light-blue: #2caef5;
 $color-light-blue-dark: #1599e1;
 $color-light-blue-darkest: #098bd3;
 $color-light-blue-light-bg: lighten($color-light-blue-dark, 47%);
-
-$color-blue: #4183D7;
+$color-blue: #4183d7;
 $color-blue-dark: #2368bf;
 $color-blue-darkest: #1659ae;
 $color-blue-light-bg: lighten($color-blue-dark, 52%);
-
 $color-red: #e50011;
 $color-red-dark: #c1000e;
 $color-red-darkest: #a4000c;
 $color-red-light-bg: lighten($color-red-dark, 60%);
-
 $color-lighter-black: #666;
 $color-light-black: #464646;
 $color-black: #212121;
@@ -99,42 +92,35 @@ $color-black-light-dark: #1a1a1a;
           & > li.bl {
             border-left: 1px solid $color-white-smoke;
           }
-
           & > li.dropdown {
             .dropdown-menu {
               border: 0;
-              -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-              -moz-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-              box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-
+              -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+              -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+              box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
               & > li.title {
                 border-bottom: 1px solid $color-white-smoke;
                 background-color: transparent;
-
               }
             }
           }
-
           & > li.dropdown.open {
             & > a {
               background-color: $color-white;
             }
           }
-
           & > li.dropdown.notify {
             .dropdown-menu {
               ul.notifications {
                 & > li {
-                border-bottom: 1px solid $color-white-smoke;
-                background-color: transparent;
+                  border-bottom: 1px solid $color-white-smoke;
+                  background-color: transparent;
                   & > a {
                     color: $color-light-black;
                   }
-
                   & > a:hover {
                     background-color: $color-white-smoke;
                     color: $color-green;
-
                   }
                 }
               }
@@ -145,10 +131,9 @@ $color-black-light-dark: #1a1a1a;
           & > li.profile {
             .dropdown-profile {
               border: 0;
-              -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-              -moz-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-              box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-
+              -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+              -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+              box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
               .profile-img {
                 background: $color-green;
                 background: -moz-linear-gradient(top, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
@@ -159,7 +144,6 @@ $color-black-light-dark: #1a1a1a;
                 background: linear-gradient(to bottom, $color-green 0%, $color-green 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
                 filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0 );
               }
-
               .profile-footer {
                 background-color: $color-white-smoke;
               }
@@ -224,6 +208,15 @@ $color-black-light-dark: #1a1a1a;
         & > li.line {
           background-color: $color-black-light-dark;
         }
+      }
+    }
+    .app-content-container {
+      .app-content-header {
+        background-color: $color-white-smoke;
+
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
+        -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
       }
     }
   }
@@ -292,33 +285,33 @@ $color-black-light-dark: #1a1a1a;
     }
   }
   @media (max-width: 767px) {
-      .app-container {
-        .app-header {
-          .navbar.navbar-default {
-            .navbar-header {
+    .app-container {
+      .app-header {
+        .navbar.navbar-default {
+          .navbar-header {
             background-color: $color-green;
-              .navbar-toggle-container {
-                ul.nav {
-                  & > li {
-                    .btn {
-                      color: $color-white;
-                      background-color: $color-green;
-                    }
+            .navbar-toggle-container {
+              ul.nav {
+                & > li {
+                  .btn {
+                    color: $color-white;
+                    background-color: $color-green;
                   }
                 }
               }
             }
-            ul.nav {
-              & > li.br {
-                border-right: 1px solid rgba(0,0,0,0.15);
-              }
-              & > li.bl {
-                border-left: 1px solid rgba(0,0,0,0.15);
-              }
+          }
+          ul.nav {
+            & > li.br {
+              border-right: 1px solid rgba(0,0,0,0.15);
+            }
+            & > li.bl {
+              border-left: 1px solid rgba(0,0,0,0.15);
             }
           }
         }
       }
+    }
   }
 }
 
@@ -337,7 +330,6 @@ $color-black-light-dark: #1a1a1a;
   -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
   -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
-
   .title {
     color: $color-lighter-black;
   }
@@ -442,14 +434,13 @@ $color-black-light-dark: #1a1a1a;
 .btn-primary.btn-light:hover {
   background-color: $color-blue-light-bg;
 }
-
 .btn-success {
   background-color: $color-green;
   border-color: $color-green-dark;
 }
 .btn-success:hover {
   background-color: $color-green-dark;
-  border-color:  $color-green-darkest;
+  border-color: $color-green-darkest;
 }
 .btn-success.btn-light {
   color: $color-green-dark;
@@ -506,7 +497,6 @@ $color-black-light-dark: #1a1a1a;
 .btn-link {
   color: $color-blue-dark;
 }
-
 .btn-light {
   background-color: $color-white;
 }
@@ -537,10 +527,9 @@ $color-black-light-dark: #1a1a1a;
     background-color: $color-green;
   }
 }
-
 .panel.panel-default {
   .panel-heading {
     background-color: $color-white-smoke;
-    border-bottom: 1px solid  $color-white-grey;
+    border-bottom: 1px solid $color-white-grey;
   }
 }

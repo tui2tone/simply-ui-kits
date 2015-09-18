@@ -1,0 +1,35 @@
+// Icons Pages
+.icons-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    float: left;
+    text-align: center;
+    width: 80px;
+    padding: 8px;
+
+    span {
+      display: block;
+    }
+    .glyphicon, .fa {
+      font-size: 1.5em;
+    }
+    .glyphicon-class {
+      margin-top: 8px;
+      font-size: 0.75em;
+    }
+  }
+
+  & > li:hover {
+    background-color: #F9F9F9;
+    cursor: pointer;
+  }
+}
+.icons-list:after {
+  content: '';
+  display: block;
+  position: relative;
+  clear: both;
+}

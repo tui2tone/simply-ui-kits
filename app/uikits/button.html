@@ -1,11 +1,19 @@
 @@include('../include/header/header.html',{ "path": "../.." })
+@@include('../include/navbar/navbar.html', {
+  "breadcrumb": {
+    "level2": "UI Kits",
+    "level1": "Button"
+  }
+})
+@@include('../include/sidebar/sidebar.html')
+<div class="app-content-container">
 <div class="app-content-header">
   <div class="header">
     <div class="title">Button</div>
     <div class="description">A button elements for user action</div>
   </div>
 </div>
-<div class="app-content no-pt">
+<div class="app-content">
   <div class="content-row">
     <div class="panel panel-default">
       <div class="panel-heading">Example</div>
@@ -81,5 +89,6 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 @@include('../include/footer/footer.html',{ "path": "../.." })

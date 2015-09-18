@@ -1,4 +1,4 @@
-    </div>
+
   </div>
   <!-- BEGIN Include Javascript Libs -->
   <script src="@@path/lib/jquery/dist/jquery.min.js" charset="utf-8"></script>
@@ -8,6 +8,9 @@
 
   <!-- BEGIN Include Javascript Files -->
   <script src="@@path/js/app.js" charset="utf-8"></script>
+  @@if(context.chart_js) {
+    <script src="@@path/js/chart.js" charset="utf-8"></script>
+  }
   <!-- END Include Javascript Files -->
 
   </body>

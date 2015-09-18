@@ -13,12 +13,7 @@ $ ->
     else
       next.css('height', 0)
 
-  MenuDropdownFixPositions($('.app-sidebar-top li.dropdown > a'))
-
-  $('.app-sidebar-top .app-sidebar li.dropdown > a').bind 'mouseenter click', (e) ->
-    e.preventDefault()
-    MenuDropdownPosition(this)
-
+  TopMenuSetting()
 
 MenuDropdownFixPositions = (elements) ->
   elements.each( ->
@@ -31,3 +26,13 @@ MenuDropdownPosition = (elm) ->
 
   next.css('top', position.top + "px")
   next.css('left', position.left + "px")
+
+TopMenuSetting = ->
+
+  # Top Menu Dropdown Position
+  MenuDropdownFixPositions($('.app-sidebar-top li.dropdown > a'))
+
+  $('.app-sidebar-top .app-sidebar li.dropdown > a').unbind 'mouseenter click'
+    .bind 'mouseenter click', (e) ->
+      e.preventDefault()
+      MenuDropdownPosition(this)
