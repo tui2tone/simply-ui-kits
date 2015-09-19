@@ -533,3 +533,45 @@ $color-black-light-dark: #1a1a1a;
     border-bottom: 1px solid $color-white-grey;
   }
 }
+
+// Input
+.has-success {
+  .form-control {
+    box-shadow: none;
+    border-color:  $color-green-dark;
+  }
+  .form-control:focus {
+    border-color: $color-green-darkest;
+    box-shadow: none;
+  }
+  .checkbox, .checkbox-inline, .control-label, .help-block, .radio {
+      color: $color-green-dark;
+  }
+}
+
+.has-warning {
+  .form-control {
+    box-shadow: none;
+    border-color:  $color-yellow-dark;
+  }
+  .form-control:focus {
+    border-color: $color-yellow-darkest;
+    box-shadow: none;
+  }
+  .checkbox, .checkbox-inline, .control-label, .help-block, .radio {
+      color: $color-yellow-dark;
+  }
+}
+.has-error {
+  .form-control {
+    box-shadow: none;
+    border-color:  $color-red;
+  }
+  .form-control:focus {
+    border-color: $color-red-darkest;
+    box-shadow: none;
+  }
+  .checkbox, .checkbox-inline, .control-label, .help-block, .radio {
+      color: $color-red;
+  }
+}

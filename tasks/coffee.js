@@ -5,7 +5,7 @@ var gulp = require("gulp"),
   concat = require('gulp-concat');
 
 gulp.task("ui-coffee", function() {
-  return gulp.src(['./app/include/**/*.coffee','./app/uikits/**/*.coffee','./app/elements/**/*.coffee'])
+  return gulp.src(['./app/include/**/*.coffee','./app/uikits/**/*.coffee','./app/elements/**/*.coffee', './app/ui.coffee'])
     .pipe(plumber({errorHandler: notify.onError(
       {
         title: "Coffee Error: Line <%= error.location.first_line %>",
