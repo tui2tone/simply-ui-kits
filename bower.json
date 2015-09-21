@@ -1,0 +1,7 @@
+{
+  "name": "flatio-admin-templates",
+  "dependencies": {
+    "checkbox3": "0.1.0"
+  },
+  "private": true
+}

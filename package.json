@@ -19,7 +19,7 @@
     "gulp-util": "*",
     "gulp-usemin": "*",
     "gulp-uglify": "1.4.1",
-    "gulp-minify-css": "*",
+    "gulp-minify-css": "1.2.1",
     "gulp-minify-html": "*",
     "gulp-rev": "*",
     "browser-sync": "*",
