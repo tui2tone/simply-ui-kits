@@ -18,7 +18,7 @@ gulp.task("ui-coffee", function() {
 });
 
 gulp.task("page-coffee", function() {
-  return gulp.src(['./app/pages/**/*.coffee'])
+  return gulp.src(['./app/pages/**/*.coffee', './app/table/**/*.coffee'])
     .pipe(plumber({errorHandler: notify.onError(
       {
         title: "Coffee Error: Line <%= error.location.first_line %>",

@@ -3,7 +3,7 @@ Sidebar Stylesheet
 */
 
 $navbar-height: 70px;
-$navbar-font: 'Oxygen', sans-serif;
+$navbar-font: 'Nunito', sans-serif;
 
 
 $sizebar-width: 280px;
@@ -152,6 +152,7 @@ $menu-item-child-height: 40px;
                 padding-right: 5px;
                 padding-left: 2px;
                 font-size: 12px;
+                font-weight: 400;
                 height: $menu-item-child-height;
                 line-height: $menu-item-child-height;
               }
@@ -242,7 +243,6 @@ $menu-item-child-height: 40px;
               }
               .title {
                 font-family: $navbar-font;
-                font-weight: bold;
               }
 
               .badge {

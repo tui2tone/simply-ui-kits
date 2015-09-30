@@ -11,6 +11,7 @@ gulp.task('html', function() {
   gulp.src(['./node_modules/awesome-bootstrap-checkbox/**/*',]).pipe(gulp.dest('./public/lib/awesome-bootstrap-checkbox'))
   gulp.src(['./node_modules/jquery-match-height/**/*',]).pipe(gulp.dest('./public/lib/jquery-match-height'))
   gulp.src(['./bower_components/checkbox3/**/*',]).pipe(gulp.dest('./public/lib/checkbox3'))
+  gulp.src(['./node_modules/datatables/**/*',]).pipe(gulp.dest('./public/lib/datatables'))
 
   return gulp.src(['./app/**/*.html', '!./app/include/*.html'])
     .pipe(fileinclude({

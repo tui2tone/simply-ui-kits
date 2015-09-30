@@ -2,7 +2,7 @@
 Navbar Stylesheet
 */
 $navbar-height: 70px;
-$navbar-font: 'Oxygen', sans-serif;
+$navbar-font: 'Ubuntu', sans-serif;
 
 $sizebar-width: 280px;
 $sizebar-collapse-width: 70px;
@@ -101,13 +101,13 @@ $sizebar-collapse-width: 70px;
 
               & > li {
                 font-size: 1em;
-                font-weight: 600;
+                font-weight: 400;
                 font-family: $navbar-font;
                 float: left;
                 & > a {
                   text-decoration: none;
                   font-family: $navbar-font;
-                  font-weight: 600;
+                  font-weight: 300;
                 }
               }
               & > li+li:before {
@@ -138,7 +138,6 @@ $sizebar-collapse-width: 70px;
 
               & > li.title {
                 padding: 10px;
-                font-weight: bold;
                 font-family: $navbar-font;
               }
             }
@@ -229,7 +228,7 @@ $sizebar-collapse-width: 70px;
           }
 
           & > li.profile {
-            font-weight: 600;
+            font-weight: 400;
             font-family: $navbar-font;
 
             & > a {
