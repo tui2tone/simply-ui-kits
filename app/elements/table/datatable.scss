@@ -1,5 +1,6 @@
 .dataTables_wrapper {
   border-radius: 2px;
+  overflow: hidden;
   .top {
     padding-left: 100px;
     position: relative;
@@ -27,6 +28,7 @@
       left: 0;
       top: 0;
       width: 100px;
+      border-right: 1px solid #DDD;
 
       label {
         width: 100px;
@@ -37,7 +39,6 @@
 
       .select2  {
         width: 100px !important;
-        border-right: 1px solid #DDD;
 
         span.select2-selection {
           height: 48px;
@@ -98,3 +99,104 @@
   }
 }
 
+.dataTables_wrapper.primary {
+  .top {
+    border-bottom: 1px solid #043D5D;
+    background-color: #095077;
+    .dataTables_filter {
+      .form-control {
+        color: #FFF;
+      }
+      .form-control::-webkit-input-placeholder {
+        color: #FFF;
+      }
+    }
+
+    .dataTables_length {
+      border-right: 1px solid #043D5D;
+
+      .select2  {
+        .select2-selection__rendered {
+          color: #FFF;
+        }
+      }
+    }
+  }
+
+  table.dataTable {
+    & > thead {
+      & >tr {
+        & > th {
+          background-color: #095077;
+          color: #FFF;
+          border-bottom: 2px solid #043D5D;
+        }
+      }
+    }
+  }
+
+  table.table-striped {
+    & > tbody {
+      & > tr:nth-of-type(odd) {
+        background-color: #fbfeff;
+      }
+    }
+  }
+}
+
+
+.dataTables_wrapper.success {
+  .top {
+    border-bottom: 1px solid #18aa4a;
+    background-color: #29c75f;
+    .dataTables_filter {
+      .form-control {
+        color: #FFF;
+      }
+      .form-control::-webkit-input-placeholder {
+        color: #FFF;
+      }
+    }
+
+    .dataTables_length {
+      border-right: 1px solid #18aa4a;
+
+      .select2  {
+        .select2-selection__rendered {
+          color: #FFF;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    .pagination {
+      & > li.active {
+        & > a , & > span {
+          border-bottom: 2px solid #18aa4a;
+          background-color: #29c75f;
+        }
+      }
+    }
+  }
+
+  table.dataTable {
+    & > thead {
+      & >tr {
+        & > th {
+          background-color: #29c75f;
+          color: #FFF;
+          border-bottom: 2px solid #18aa4a;
+        }
+      }
+    }
+  }
+
+  table.table-striped {
+    & > tbody {
+      & > tr:nth-of-type(odd) {
+        background-color: #f8fffa;
+      }
+    }
+  }
+}
