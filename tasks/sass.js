@@ -5,7 +5,7 @@ var gulp = require("gulp"),
   concat = require('gulp-concat');
 
 gulp.task("style", function() {
-  gulp.src(['./app/**/*.scss', '!./app/themes/**/*'])
+  gulp.src(['./app/**/style.scss', './app/**/*.scss', '!./app/themes/**/*'])
     .pipe(plumber({errorHandler: notify.onError(
       {
         title: "SCSS Error: Line <%= error.line %>",

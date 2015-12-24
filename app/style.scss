@@ -6,7 +6,8 @@ body {
   font-family: 'NTR', sans-serif;
   padding-top: 100px;
   font-size: 18px;
-  color: #333;
+  color: #444;
+  
 }
 
 .bg1 {
@@ -31,38 +32,10 @@ body {
   color: #FFF !important;
 }
 
-.no-margin {
-  margin: 0 !important;
-}
-
-.no-padding {
-  padding: 0px !important;
-}
-
-.no-border-left {
-  border-left: 0 !important;
-}
 
 .ui-title {
   margin-top: 2em;
   margin-bottom: 1.5em;
-}
-
-.no-padding-left {
-  padding-left: 0 !important;
-}
-
-.no-padding-right {
-  padding-right: 0 !important;
-}
-
-.row.no-gap {
-  margin-left: 0;
-  margin-right: 0;
-  & > [class*="col-"] {
-    padding-left:0;
-    padding-right: 0px;
-  }
 }
 
 .full-width-bg {

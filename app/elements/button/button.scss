@@ -64,4 +64,35 @@
       margin-top: -1px;
     }
   }
+
+  & > .dropdown-menu {
+    background-color: #043D5D;
+    padding: 0;
+    border-radius: 2px;
+    border: 0px solid #333;
+
+    & > li {
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      & > a {
+        color: #FFF;
+        padding: 8px 15px;
+      }
+    }
+    & > li:hover {
+      background-color: transparent;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      & > a {
+        background-color: rgba(0,0,0,0.1);
+        color: #FFF;
+        padding: 8px 15px;
+      }
+    }
+
+    .divider {
+      height: 0px;
+      background-color: #F9F9F9;
+      margin: 0;
+      border-bottom: 0px solid #F9F9F9;
+    }
+  }
 }

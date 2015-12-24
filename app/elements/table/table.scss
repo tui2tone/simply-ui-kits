@@ -36,3 +36,14 @@ table.table-card {
     }
   }
 }
+
+table.table {
+  & > tbody, & > thead {
+    & > tr {
+      td, th {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+    }
+  }
+}

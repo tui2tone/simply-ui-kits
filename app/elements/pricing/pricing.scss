@@ -5,7 +5,7 @@
     padding: 20px;
     text-align: center;
     & > .title {
-      font-size:1.1em;
+      font-size:1.05em;
       text-transform: uppercase;
       font-family: 'Roboto', sans-serif;
     }
@@ -17,6 +17,7 @@
 
   & > .pricing-body {
     padding: 20px;
+    color: #666;
 
     ul.description {
       list-style: none;
@@ -49,7 +50,7 @@
 }
 
 .pricing-table.highlight {
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 1px 0px rgba(0,0,0,0.08);
   position: absolute;
   width: 100%;
@@ -71,6 +72,7 @@
     border-top: 2px solid #18aa4a;
   }
   & > .pricing-body {
+    color: #FFF;
     ul.description {
       & > li {
         border-bottom: 1px solid #18aa4a;
@@ -85,22 +87,24 @@
 
 
 .pricing-table.light-yellow {
-  background-color: #ffe5b6;
   & > .pricing-header {
     border-bottom: 2px solid #fbd490;
+    background-color: #ffe5b6;
+    color: #8a6d3b;
   }
-  & > .pricing-footer {
-    border-top: 2px solid #fbd490;
-  }
-  & > .pricing-body {
-    ul.description {
-      & > li {
-        border-bottom: 1px solid #fbd490;
-      }
+}
 
-      & > li:last-child {
-        border-bottom: 0;
-      }
-    }
+
+.pricing-table.light-blue {
+  & > .pricing-header {
+    border-bottom: 2px solid #93e5f3;
+    background-color: #c3f0f7;
+  }
+}
+
+.pricing-table.light-green {
+  & > .pricing-header {
+    border-bottom: 2px solid #9df0b9;
+    background-color: #bafed1;
   }
 }

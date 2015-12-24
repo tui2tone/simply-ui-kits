@@ -4,6 +4,13 @@
   border-width: 1px;
   border-style: solid;
 }
+.alert-dismissable, .alert-dismissible {
+  .close {
+    float: right;
+    right: 0;
+  }
+}
+
 
 .alert.alert-success {
   border-color: #9df0b9;
