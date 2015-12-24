@@ -1,12 +1,12 @@
 {
   "name": "flatio-admin-templates",
   "dependencies": {
-    "jquery": "2.1.4",
+    "awesome-bootstrap-checkbox": "0.3.6",
     "bootstrap": "3.3.5",
-    "font-awesome": "4.4.0",
     "chartist": "0.9.4",
     "datatables": "1.10.8",
-    "awesome-bootstrap-checkbox": "0.3.6",
+    "font-awesome": "4.4.0",
+    "jquery": "2.1.4",
     "jquery-match-height": "0.6.0"
   },
   "devDependencies": {

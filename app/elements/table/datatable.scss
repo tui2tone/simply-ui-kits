@@ -1,0 +1,100 @@
+.dataTables_wrapper {
+  border-radius: 2px;
+  .top {
+    padding-left: 100px;
+    position: relative;
+    border-bottom: 1px solid #DDD;
+    background-color: #EEE;
+    .dataTables_filter {
+      width: 100%;
+      position: relative;
+
+      label {
+        width: 100%;
+        display: block;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+      .form-control {
+        border: 0px;
+        width: 100%;
+        margin-left: 0;
+        background-color: transparent;
+      }
+    }
+    .dataTables_length {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+
+      label {
+        width: 100px;
+        display: block;
+        font-weight: normal;
+        margin-bottom: 0;
+      }
+
+      .select2  {
+        width: 100px !important;
+        border-right: 1px solid #DDD;
+
+        span.select2-selection {
+          height: 48px;
+          border-radius: 0;
+          border: 0;
+          background-color: transparent;
+        }
+
+        .select2-selection__rendered {
+          color: #888;
+          line-height: 48px;
+          padding-left: 15px;
+        }
+
+        .select2-selection__arrow {
+          height: 46px;
+          right: 5px;
+        }
+
+      }
+    }
+  }
+
+  .top::after ,.bottom::after{
+    content: '';
+    position: relative;
+    clear: both;
+    display: block;
+  }
+
+  .bottom {
+    border-top: 2px solid #DDD;
+    padding: 12px 15px;
+    font-size: 14px;
+    .dataTables_info {
+      float: left;
+    }
+    .dataTables_paginate {
+      float: right;
+
+      .pagination {
+        display: block;
+      }
+    }
+  }
+
+  table.dataTable {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    & > thead {
+      & >tr {
+        & > th {
+          background-color: #EEE;
+        }
+      }
+    }
+  }
+}
+

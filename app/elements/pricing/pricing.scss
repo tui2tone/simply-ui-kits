@@ -61,6 +61,17 @@
   }
 }
 
+@media (max-width: 991px) {
+
+  .pricing-table.highlight {
+    border-radius: 0px;
+    margin-top: 0px;
+    position: relative;
+    & > .pricing-body {
+      margin-bottom: 0px;
+    }
+  }
+}
 
 .pricing-table.green {
   color: #FFF;

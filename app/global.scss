@@ -71,3 +71,6 @@
 .no-border-bottom {
   border-bottom: 0 !important;
 }
+input:focus, textarea:focus {
+    outline: none;
+}

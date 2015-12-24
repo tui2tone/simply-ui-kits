@@ -78,7 +78,6 @@
       top: 50%;
       right: -15px;
       transform: translate(0%, -50%);
-      z-index: 100001;
     }
 
     & > li:before {
@@ -89,7 +88,6 @@
       top: 50%;
       right: -16px;
       transform: translate(0%, -50%);
-      z-index: 100000;
     }
 
     & > li.active {

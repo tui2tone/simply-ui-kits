@@ -1,3 +1,23 @@
+table.table {
+  & > tbody, & > thead {
+    & > tr {
+      td, th {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+
+      td.search {
+        padding: 8px;
+        background-color: #EEE;
+
+        .form-control {
+          padding: 4px 12px;
+        }
+      }
+    }
+  }
+}
+
 table.table-card {
   border-collapse: separate;
   border-spacing: 0px 4px;
@@ -6,8 +26,7 @@ table.table-card {
     & >tr {
       & > th {
         font-size: 16px;
-        padding: 12px 20px;
-        padding-bottom: 4px;
+        padding: 12px 20px 4px 20px;
         border-bottom: 0;
       }
     }
@@ -15,11 +34,10 @@ table.table-card {
 
   & > tbody {
     & > tr {
-
+      background-color: #FFF;
       td, th {
         border-top: 0;
         padding: 12px 20px;
-        background-color: #FFF;
         font-size: 16px;
         box-shadow: 0 1px 0px rgba(0, 0, 0, 0.08);
       }
@@ -36,14 +54,18 @@ table.table-card {
     }
   }
 }
-
-table.table {
-  & > tbody, & > thead {
-    & > tr {
+table.table-clickable {
+  & > tbody {
+    & > tr:hover {
       td, th {
-        font-size: 16px;
-        padding: 12px 20px;
+        cursor: pointer;
+        background-color: rgba(195,240,247,0.2);
+      }
+
+      td.search {
+        background-color: #EEE;
       }
     }
   }
+
 }

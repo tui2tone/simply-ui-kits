@@ -1,0 +1,21 @@
+.pagination {
+  font-size: 14px;
+  margin: 10px 0;
+
+  & >li {
+    & > a , & > span {
+      color: #333;
+      border-radius: 2px;
+      border-color: #EEE;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+      margin-left: 2px;
+    }
+  }
+
+  & > li.active {
+    & > a , & > span {
+      border-bottom: 2px solid #043D5D;
+      background-color: #095077;
+    }
+  }
+}
