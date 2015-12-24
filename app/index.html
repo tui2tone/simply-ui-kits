@@ -1,16 +1,137 @@
 @@include('./include/header/header.html',{
-    "path": ".."
-  })
-@@include('./include/navbar/navbar.html', {
-  "breadcrumb": {
-    "level2": "",
-    "level1": "Dashboard"
-  }
+"path": ".."
 })
-@@include('./include/sidebar/sidebar.html')
-<div class="app-content-container">
-  @@include('./pages/dashboard.html')
+@@include('./include/navbar/navbar.html', {
+"breadcrumb": {
+"level2": "",
+"level1": "Dashboard"
+}
+})
+<div class="jumbotron bg1">
+  <div class="container">
+    <br><br><br>
+    <h1 class="text-center color-white">Simply UI Kits</h1>
+    <p class="text-center color-white">A bootstrap flat design UI-Kits</p>
+    <br><br><br>
+  </div>
 </div>
-@@include('./include/footer/footer.html',{
+<div class="jumbotron bg2">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9"><h2 class="no-m">Lastest Version <span class="badge">v1.0</span></h2></div>
+      <div class="col-sm-3 text-right">
+        <button type="button" class="btn btn-success">Download</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="jumbotron bg-white">
+  <div class="container">
+    <h1 class="text-center">UI Kits</h1>
+    <h3>Color</h3>
+    <h3 class="ui-title">Grid</h3>
+    <h3 class="ui-title">Buttons</h3>
+    @@include('./elements/button/button.html')
+    <h3 class="ui-title">Button Dropdown</h3>
+    @@include('./elements/button/dropdown.html')
+    <h3 class="ui-title">Progress Bar</h3>
+    @@include('./elements/progress/progress.html')
+    <h3 class="ui-title">Alert</h3>
+    @@include('./elements/alert/alert.html')
+    <h3 class="ui-title">Modal</h3>
+    @@include('./elements/modal/modal.html')
+    <h3 class="ui-title">Form</h3>
+    @@include('./elements/form/form.html')
+    <h3 class="ui-title">Table</h3>
+    @@include('./elements/table/table.html')
+    
+    <h3 class="ui-title">Panel</h3>
+    @@include('./elements/panel/panel.html')
+    <h3>Pricing Table</h3>
+    @@include('./elements/pricing/pricing.html')
+    
+    <h3 class="ui-title">Step & Tab</h3>
+    <h3 class="ui-title">Code</h3>
+    @@include('./elements/code/code.html')
+  </div>
+</div>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="text-center">Navbar</h1>
+  </div>
+</div>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Simply Kits</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UI Kits <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li><a href="#about">Chart</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+      </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Simply Kits</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UI Kits <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+          <li><a href="#about">Chart</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../navbar/">Default</a></li>
+          <li><a href="../navbar-static-top/">Static top</a></li>
+          <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    @@include('./include/footer/footer.html',{
     "path": ".."
-  })
+    })
