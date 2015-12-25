@@ -5,6 +5,19 @@ $navbar-height: 100px;
 $navbar-affix-height: 60px;
 $navbar-font: 'NTR', sans-serif;
 
+.nav {
+  & > li {
+    position: static !important;
+  }
+}
+.dropdown {
+  position: static !important;
+}
+
+.dropdown:not(.mega-dropdown):not(.submenu):not(.mega-submenu) {
+  position: relative !important;
+}
+
 .navbar {
   height: $navbar-height;
   min-height: $navbar-height;
@@ -48,6 +61,7 @@ $navbar-font: 'NTR', sans-serif;
   }
 
   .navbar-collapse {
+    position: relative;
     ul.nav {
       & > li {
         height: $navbar-height;
@@ -65,13 +79,22 @@ $navbar-font: 'NTR', sans-serif;
         }
 
         .dropdown-menu {
-          font-size: 12px;
           padding: 0;
-          border-radius: 1px;
+          border-radius: 0px;
+          border: 0;
+          margin-top: 0px;
+          border-top: 1px solid #EEE;
 
-          & > li.title {
-            padding: 10px;
-            font-family: $navbar-font;
+          & > li {
+            border-bottom: 1px solid #F9F9F9;
+            & > a {
+              padding: 10px 20px;
+            }
+          }
+
+          .divider {
+            border-top: 2px solid #AAA;
+            margin: 0;
           }
         }
       }
@@ -100,4 +123,8 @@ $navbar-font: 'NTR', sans-serif;
       }
     }
   }
+}
+
+.navbar-inverse {
+  background-color: #222;
 }

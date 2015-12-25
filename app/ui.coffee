@@ -42,3 +42,6 @@ $ ->
 
   $('div.dataTables_filter input').attr('placeholder', 'Search...');
   $( datatable.table().container() ).addClass( 'success' );
+
+  $(".mega-dropdown-menu").click (e) ->
+    e.stopPropagation()
