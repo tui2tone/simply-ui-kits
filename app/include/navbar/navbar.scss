@@ -4,6 +4,7 @@ Navbar Stylesheet
 $navbar-height: 100px;
 $navbar-affix-height: 60px;
 $navbar-font: 'NTR', sans-serif;
+$color-profile: #29c75f;
 
 .nav {
   & > li {
@@ -95,6 +96,113 @@ $navbar-font: 'NTR', sans-serif;
           .divider {
             border-top: 2px solid #AAA;
             margin: 0;
+          }
+        }
+      }
+
+      & > li.notify {
+        & > a {
+          text-align: center;
+        }
+
+        .dropdown-menu {
+          margin-top: 2px;
+          ul.notifications {
+            margin-bottom: 0;
+            & > li {
+              padding: 0;
+              border: 0;
+              overflow: hidden;
+              & > a {
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+                border:0;
+                font-size: 12px;
+                line-height: 20px;
+                vertical-align: middle;
+
+                .icon {
+                  font-size: 2.5em;
+                  margin-top: -10px;
+                  margin-bottom: -18px;
+                  margin-left: -10px;
+                  width: 40px;
+                  height: 36px;
+                  text-align: center;
+                  vertical-align: middle;
+                }
+
+                .badge {
+                  float: right;
+                  font-size: 10px;
+                  height: 20px;
+                  line-height: 20px;
+                  min-width: 20px;
+                  padding: 0 5px;
+                }
+              }
+
+              & > a::after {
+                clear: both;
+                content: '';
+                display: block;
+              }
+            }
+
+            & > li.message {
+              text-align: center;
+              font-size: 9px;
+            }
+          }
+        }
+      }
+
+      & > li.profile {
+
+        .dropdown-profile {
+          border-top: 0;
+          line-height: 1em;
+          padding: 0;
+          border-radius: 0px;
+          border-bottom-right-radius: 2px;
+          border-bottom-left-radius: 2px;
+          width: 250px;
+          animation-name: dropdown-animate;
+          -webkit-animation-name: dropdown-animate;
+          -webkit-animation-duration: 0.2s;
+          .profile-img {
+            background: $color-profile;
+            background: -moz-linear-gradient(top, $color-profile 0%, $color-profile 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, $color-profile), color-stop(50%, $color-profile), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+            background: -webkit-linear-gradient(top, $color-profile 0%, $color-profile 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(top, $color-profile 0%, $color-profile 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+            background: -ms-linear-gradient(top, $color-profile 0%, $color-profile 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+            background: linear-gradient(to bottom, $color-profile 0%, $color-profile 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0 );
+
+            padding: 40px;
+            text-align: center;
+            img {
+              width: 100px;
+              height: auto;
+              border-radius: 75px;
+              border: 2px solid #FFF;
+              padding: 0;
+            }
+          }
+          .profile-info {
+            text-align: center;
+            margin-top: -36px;
+            margin-bottom: 20px;
+          }
+          .profile-footer {
+            text-align: center;
+            padding: 15px;
+
+            .btn {
+              margin-bottom: 0;
+            }
           }
         }
       }

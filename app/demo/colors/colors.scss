@@ -1,0 +1,31 @@
+.colorbox {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+
+  .color1, .color2 {
+    width: 50%;
+    float: left;
+
+    .color {
+      width: 100%;
+      min-height: 60px;
+    }
+  }
+
+  .heading {
+    text-align: center;
+    padding: 5px 10px;
+    .title {
+
+    }
+
+    .subtitle {
+      font-size: 0.8em;
+      margin-top: -5px;
+    }
+  }
+}
