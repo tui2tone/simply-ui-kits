@@ -1,9 +1,23 @@
 .modal {
   .modal-dialog {
+    .modal-header {
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
+      background-color: #FFF;
+    }
     .modal-content {
-      border-radius: 2px;
+      background-color: #F9F9F9;
       border: 0;
       font-size: 16px;
+    }
+
+    .modal-footer {
+      border-bottom-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      background-color: #F9F9F9;
+      .btn {
+        margin-bottom: 0;
+      }
     }
   }
 }

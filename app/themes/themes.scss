@@ -1,5 +1,17 @@
 $white: #FFF;
 
+.navbar {
+  .navbar-collapse {
+    ul.nav {
+      & > li {
+        & > a {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
 .navbar.navbar-default {
 	background-color: $white;
 

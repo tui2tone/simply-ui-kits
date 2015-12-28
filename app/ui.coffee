@@ -1,7 +1,7 @@
 # Match Height Element
 $ ->
-  $('.equal-height-item').matchHeight({
-    target: $('.equal-height-container')
+  $('.eqh-item').matchHeight({
+    target: $('.eqh-container')
   })
 
   $('code').each (i, block) ->

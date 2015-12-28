@@ -5,11 +5,12 @@ $font: 'Roboto', sans-serif;
   border-radius: 2px;
   background-color: #FFF;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  margin-bottom: 50px;
 
   .card-header {
-    font-family: $font;
     padding: 15px 30px;
     border-bottom: 2px solid #F9F9F9;
+    font-size: 1.2em;
 
     .card-action {
       right: 0;
@@ -25,9 +26,7 @@ $font: 'Roboto', sans-serif;
     padding: 30px;
   }
   .card-footer {
-    font-family: $font;
     padding: 15px 30px;
     border-top: 2px solid #F9F9F9;
-    font-size: 16px;
   }
 }
