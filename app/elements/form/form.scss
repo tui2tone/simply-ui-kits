@@ -3,8 +3,13 @@ input.form-control, textarea.form-control {
   padding: 5px 15px;
   height: auto;
   font-size: 1em;
+  line-height: auto;
   border: 2px solid #DDD;
   box-shadow: none;
+}
+
+textarea.form-control {
+  padding: 15px;
 }
 
 input::-webkit-input-placeholder { line-height: normal; }

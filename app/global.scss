@@ -84,5 +84,16 @@ a:hover {
 }
 a:hover, a:visited, a:link, a:active
 {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+
+@media (max-width: 480px) {
+  .text-xs-center {
+    text-align: center;
+  }
+
+  .text-xs-right {
+    text-align: right;
+  }
 }

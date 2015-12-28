@@ -130,7 +130,6 @@
     }
 
     & > dt.heading {
-
       & > .title {
         position: relative;
         display: block;
@@ -159,5 +158,138 @@
     background-color: #DDD;
     z-index: 1006;
     border-radius: 2px;
+  }
+}
+
+.timeline.pos-right {
+  dl {
+    & > dt.item {
+      .marker {
+        left: 0;
+        margin-left: 0;
+      }
+
+      .event {
+        float: right;
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0px;
+      }
+
+      .event::before {
+        content: '';
+        display: block; 
+        position: absolute;
+        margin-top: 18px;
+        margin-left: auto;
+        margin-right: -50px;
+        left: auto;
+        right: 100%;
+        top: 0;
+
+        width: 0; 
+        height: 0; 
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+        border-left: 0px; 
+        border-right: 14px solid #F5F5F5;
+      }
+
+      .event::after {
+        content: '';
+        display: block; 
+        position: absolute;
+        margin-top: 18px;
+        margin-left: auto;
+        margin-right: -50px;
+        left: auto;
+        right: 100%;
+        top: 0;
+
+        width: 0; 
+        height: 0; 
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent; 
+        border-left: 0px;
+        border-right: 12px solid #FFF; 
+      }
+    }
+
+    & > dt.heading {
+      & > .title {
+        margin-left: 0px;
+      }
+    }
+  }
+  dl::after {
+    left: 15px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .timeline {
+    dl {
+      & > dt.item, & > dt.item.pos-right {
+        .marker {
+          left: 0;
+          margin-left: 0;
+        }
+
+        .event {
+          float: right;
+          width: 100%;
+          padding-left: 50px;
+          padding-right: 0px;
+        }
+
+        .event::before {
+          content: '';
+          display: block; 
+          position: absolute;
+          margin-top: 18px;
+          margin-left: auto;
+          margin-right: -50px;
+          left: auto;
+          right: 100%;
+          top: 0;
+
+          width: 0; 
+          height: 0; 
+          border-top: 14px solid transparent;
+          border-bottom: 14px solid transparent;
+          border-left: 0px; 
+          border-right: 14px solid #F5F5F5;
+        }
+
+        .event::after {
+          content: '';
+          display: block; 
+          position: absolute;
+          margin-top: 18px;
+          margin-left: auto;
+          margin-right: -50px;
+          left: auto;
+          right: 100%;
+          top: 0;
+
+          width: 0; 
+          height: 0; 
+          border-top: 12px solid transparent;
+          border-bottom: 12px solid transparent; 
+          border-left: 0px;
+          border-right: 12px solid #FFF; 
+        }
+      }
+
+      & > dt.heading {
+        & > .title {
+          margin-left: 0px;
+        }
+      }
+    }
+    dl::after {
+      left: 15px;
+    }
   }
 }

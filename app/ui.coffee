@@ -1,7 +1,7 @@
 # Match Height Element
 $ ->
   $('.eqh-item').matchHeight({
-    target: $('.eqh-container')
+    byRow: true
   })
 
   $('code').each (i, block) ->
