@@ -1,0 +1,15 @@
+.jumbotron {
+  width: 100%;
+  min-height: 400px;
+  display: table;
+  text-align: center;
+
+  & > .vertical-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.jumbotron-lg {
+  min-height: 600px;
+}

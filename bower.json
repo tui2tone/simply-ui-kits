@@ -4,7 +4,8 @@
     "checkbox3": "0.1.0",
     "Ionicons": "ionicons#~2.0.1",
     "select2": "~4.0.1",
-    "animate.css": "~3.5.0"
+    "animate.css": "~3.5.0",
+    "jquery.stellar": "~0.6.2"
   },
   "private": true
 }

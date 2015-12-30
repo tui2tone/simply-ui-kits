@@ -51,3 +51,5 @@ $ ->
 
   $('.navbar-fixed-top .navbar-collapse').on 'shown.bs.collapse', ->
     $('body').addClass('navbar-collapse-open')
+
+  $.stellar();

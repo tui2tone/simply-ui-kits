@@ -3,8 +3,18 @@ body.navbar-collapse-open {
 }
 
 @media (max-width: 767px) {
+  body {
+    .app-container {
+      padding-top: 60px;
+    }
+  }
   body.navbar-collapse-open {
     overflow: hidden;
+  }
+
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 .row.no-gap {
@@ -15,6 +25,7 @@ body.navbar-collapse-open {
     padding-right: 0px;
   }
 }
+
 
 .container-lg {
 

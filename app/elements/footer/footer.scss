@@ -82,7 +82,9 @@
   }
 
   .footer-copyright {
+    color: #555;
     padding: 30px 15px;
+    position: relative;
   }
 
   .footer-box + .footer-copyright {
@@ -156,5 +158,10 @@
         }
       }
     }
+  }
+
+
+  .footer-copyright {
+    color: #DDD;
   }
 }
