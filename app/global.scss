@@ -1,4 +1,12 @@
+body.navbar-collapse-open {
+  overflow: auto;
+}
 
+@media (max-width: 767px) {
+  body.navbar-collapse-open {
+    overflow: hidden;
+  }
+}
 .row.no-gap {
   margin-left: 0;
   margin-right: 0;

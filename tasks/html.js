@@ -14,6 +14,7 @@ gulp.task('html', function() {
   gulp.src(['./library/datatables/**/*',]).pipe(gulp.dest('./public/lib/datatables'))
   gulp.src(['./bower_components/Ionicons/**/*',]).pipe(gulp.dest('./public/lib/Ionicons'))
   gulp.src(['./bower_components/select2/**/*',]).pipe(gulp.dest('./public/lib/select2'))
+  gulp.src(['./bower_components/animate.css/**/*',]).pipe(gulp.dest('./public/lib/animate.css'))
 
   return gulp.src(['./app/**/*.html', '!./app/include/*.html'])
     .pipe(fileinclude({

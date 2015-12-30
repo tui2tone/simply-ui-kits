@@ -45,3 +45,9 @@ $ ->
 
   $(".mega-dropdown-menu").click (e) ->
     e.stopPropagation()
+
+  $('.navbar-fixed-top .navbar-collapse').on 'hidden.bs.collapse', ->
+    $('body').removeClass('navbar-collapse-open')
+
+  $('.navbar-fixed-top .navbar-collapse').on 'shown.bs.collapse', ->
+    $('body').addClass('navbar-collapse-open')
