@@ -1,11 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=NTR);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300);
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 body {
   background-color: #F9F9F9;
-  font-family: 'NTR', sans-serif;
-  font-size: 17px;
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
   color: #555;
   
 }
@@ -15,10 +19,11 @@ body {
 }
 
 .bg1 {
-  background-image:url('../images/bg/picjumbo.com_HNCK9329.jpg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-attachment: fixed;
+  background-color: #29c75f;
+  // background-image:url('../images/bg/picjumbo.com_HNCK9329.jpg');
+  // background-repeat:no-repeat;
+  // background-size:cover;
+  // // background-attachment: fixed;
 }
 
 .bg2 {
@@ -27,11 +32,7 @@ body {
 }
 
 .bg3 {
-  background-image:url('../images/bg/picjumbo.com_HNCK7802.jpg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-attachment: fixed;
-  position: relative;
+  background-color: #666;
 
 }
 .bg-overlay-white,  .bg-overlay-black, .bg-overlay-black-light  {

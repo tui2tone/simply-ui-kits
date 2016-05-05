@@ -44,7 +44,6 @@ $color-profile: #29c75f;
 
     .navbar-brand {
       margin-left: 0;
-      font-family: $navbar-font;
       padding: 0 15px;
       padding-left: 0px;
       height: $navbar-height;
@@ -56,13 +55,11 @@ $color-profile: #29c75f;
       -webkit-transition: all 0.2s;
       transition: all 0.2s;
 
-      .brand-logo {
-        font-size: 1.5em;
-        display: none;
-      }
-
-      .brand-title {
-        display: block;
+      i.icon {
+        font-size: 2em;
+        margin-left: 5px;
+        margin-right: 5px;
+        vertical-align: middle;
       }
     }
 
@@ -146,7 +143,6 @@ $color-profile: #29c75f;
           height: $navbar-height;
           line-height: $navbar-height;
           border-radius: 0;
-          font-family: $navbar-font;
           padding: 0 20px;
           background-color: transparent;
 
